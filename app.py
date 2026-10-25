@@ -1,18 +1,19 @@
-"""V7.7.2 local Streamlit demo. No repository access, no synthetic scientific evidence."""
+"""V7.7.3 local Streamlit demo. No repository access, no synthetic scientific evidence."""
 import json
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 import networkx as nx
 from src.demo import SAFE_QUESTIONS, observations, graph_neighborhood
-from src.v772 import build_v772 as build_investigation, to_markdown
+from src.v773 import build_v773 as build_investigation, to_markdown
+from src.version import APP_VERSION, download_name
 from src.v7 import literature_refresh, population
 from src.release import report
 from src.engine import integrity
 
-st.set_page_config(page_title='Healthcare Intelligence | V7.7.2',layout='wide',page_icon='🧬')
+st.set_page_config(page_title=f'Healthcare Intelligence | {APP_VERSION}',layout='wide',page_icon='🧬')
 st.markdown('''<style>.block-container{padding-top:1.7rem;max-width:1450px}.small-note{color:#52647a;font-size:0.87rem}.hero{padding:1.25rem 1.6rem;background:#102c45;color:white;border-radius:14px}.hero h1{color:white;margin:0;font-size:2rem}.hero p{color:#d5e5ee;margin:0.4rem 0 0}</style>''',unsafe_allow_html=True)
-st.markdown('<div class="hero"><h1>Healthcare Intelligence · V7.7.2</h1><p>Clinical knowledge graph + population intelligence + verifiable biomedical evidence</p></div>',unsafe_allow_html=True)
+st.markdown(f'<div class="hero"><h1>Healthcare Intelligence · {APP_VERSION}</h1><p>Clinical knowledge graph + population intelligence + verifiable biomedical evidence</p></div>',unsafe_allow_html=True)
 st.caption('CONTROLLED DEMONSTRATION · Authentic evidence only · Screening ≠ diagnosis · No clinical eligibility or validated population trends')
 try:
     stats=integrity()
@@ -41,7 +42,7 @@ with ask_tab:
             if section['citations']:st.caption('Evidence IDs: '+', '.join(section['citations']))
         with st.expander('Technical tool execution and full source provenance'):
             st.json(b['technical_trace'])
-        st.download_button('Download investigation (.md)',to_markdown(b),'Healthcare_Intelligence_Investigation_V7_7_1.md','text/markdown')
+        st.download_button('Download investigation (.md)',to_markdown(b),download_name('Investigation','md'),'text/markdown')
     st.caption('Population-only questions bypass PubMed, ClinicalTrials.gov, and KG traversal even when live retrieval is checked. Transparent bounded tool orchestration, not an autonomous LLM. Only unsupported claims are blocked; supported findings remain visible.')
 with graph_tab:
     st.subheader('Read-only clinical knowledge graph')
@@ -104,10 +105,10 @@ with report_tab:
         bundle=st.session_state['v77_bundle']
         markdown=to_markdown(bundle)
         st.markdown(markdown)
-        st.download_button('Download report (.md)',markdown,'Healthcare_Intelligence_Report_V7_7_2.md','text/markdown')
-        st.download_button('Download evidence JSON',json.dumps(bundle,indent=2,default=str),'Healthcare_Intelligence_Evidence_V7_7_2.json','application/json')
+        st.download_button('Download report (.md)',markdown,download_name('Report','md'),'text/markdown')
+        st.download_button('Download evidence JSON',json.dumps(bundle,indent=2,default=str),download_name('Evidence','json'),'application/json')
 with gate_tab:
     st.subheader('Validation and evidence limitations')
     st.json(report())
-    st.warning('V7.7.2 is a controlled functional demonstration, not a research-validated or clinical-grade system. External API verification requires network access.')
+    st.warning(f'{APP_VERSION} is a controlled functional demonstration, not a research-validated or clinical-grade system. External API verification requires network access.')
     st.caption('No GitHub access, cloning, pushing, deployment, or original KG modification is performed by this application.')

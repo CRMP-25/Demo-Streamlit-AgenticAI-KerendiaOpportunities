@@ -173,3 +173,12 @@ The aim is a reliable research partner whose outputs are independently inspectab
 
 ## V7.7.2 — Focused population intent routing (2026-10-25)
 The user supplied a V7.7.1 population-only Markdown report. Its estimate, confidence interval, survey weight, and unweighted cases matched preserved observations, but it omitted weighted prevalence and unnecessarily included KG traversal, PubMed, ClinicalTrials.gov and pivotal studies. V7.7.2 introduces a deterministic population-only route that bypasses all those clinical/external tools and reports source-stored complete-case prevalence and denominator. The original KG and NHANES source artifacts remain unchanged. Integrated investigations continue through V7.7.1 logic. No independent NHANES replication, clinical validation, or Streamlit Cloud acceptance is claimed.
+
+
+## V7.7.3 — Evidence interpretation and version consistency (2026-10-25)
+
+Authorized after review of the V7.7.2 integrated finerenone report. The report retrieved the preserved NHANES proxy, baseline KG concepts/edges, PubMed articles, trial registrations and targeted FIDELIO-DKD/FIGARO-DKD/FIDELITY-related abstracts, but it lacked structured synthesis, showed unexpanded graph IDs, and truncated excerpts. The downloaded investigation filename incorrectly contained V7.7.1.
+
+Implementation: `src/v773.py` adds a bounded executive evidence synthesis, publication-type title heuristics with explicit non-validation labels, a source-linked evidence comparison, complete source abstract sections, readable original KG assertions, and an NHANES-to-evidence applicability matrix. `src/version.py` centralizes current release and download filenames; `app.py` uses it throughout. No original KG modification, fabricated publications, invented outcomes, or inferred eligible population. V7.7.2 population-only routing retained.
+
+Local acceptance: 70 automated tests passed; Python compilation passed; original KG SHA-256 `4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf` unchanged. Live external APIs and Streamlit Cloud not executed in this environment. Full trial publication primacy, effect-size appraisal and NHANES replication remain pending; title heuristics are not a substitute for critical appraisal.
