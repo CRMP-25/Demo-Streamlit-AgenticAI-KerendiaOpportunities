@@ -1,0 +1,12 @@
+{
+  "version": "V7.7.1",
+  "date": "2026-10-25",
+  "automated_tests": {
+    "passed": 59,
+    "failed": 0
+  },
+  "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+  "live_pubmed": "NOT_RUN",
+  "streamlit_cloud": "NOT_RUN",
+  "scope": "controlled research demo; clinical appraisal not completed"
+}

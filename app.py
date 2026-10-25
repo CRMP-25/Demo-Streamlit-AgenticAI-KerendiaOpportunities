@@ -1,18 +1,18 @@
-"""V7.6.1 local Streamlit demo. No repository access, no synthetic scientific evidence."""
+"""V7.7.2 local Streamlit demo. No repository access, no synthetic scientific evidence."""
 import json
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 import networkx as nx
 from src.demo import SAFE_QUESTIONS, observations, graph_neighborhood
-from src.v761 import build_investigation, to_markdown
+from src.v772 import build_v772 as build_investigation, to_markdown
 from src.v7 import literature_refresh, population
 from src.release import report
 from src.engine import integrity
 
-st.set_page_config(page_title='Healthcare Intelligence | V7.6.1',layout='wide',page_icon='🧬')
+st.set_page_config(page_title='Healthcare Intelligence | V7.7.2',layout='wide',page_icon='🧬')
 st.markdown('''<style>.block-container{padding-top:1.7rem;max-width:1450px}.small-note{color:#52647a;font-size:0.87rem}.hero{padding:1.25rem 1.6rem;background:#102c45;color:white;border-radius:14px}.hero h1{color:white;margin:0;font-size:2rem}.hero p{color:#d5e5ee;margin:0.4rem 0 0}</style>''',unsafe_allow_html=True)
-st.markdown('<div class="hero"><h1>Healthcare Intelligence · V7.6.1</h1><p>Clinical knowledge graph + population intelligence + verifiable biomedical evidence</p></div>',unsafe_allow_html=True)
+st.markdown('<div class="hero"><h1>Healthcare Intelligence · V7.7.2</h1><p>Clinical knowledge graph + population intelligence + verifiable biomedical evidence</p></div>',unsafe_allow_html=True)
 st.caption('CONTROLLED DEMONSTRATION · Authentic evidence only · Screening ≠ diagnosis · No clinical eligibility or validated population trends')
 try:
     stats=integrity()
@@ -22,27 +22,27 @@ c1,c2,c3,c4=st.columns(4)
 c1.metric('Clinical concepts',stats['nodes']);c2.metric('KG relationships',stats['edges']);c3.metric('Population observations',stats['observations']);c4.metric('Candidate links',stats['links'])
 ask_tab,graph_tab,pop_tab,lit_tab,report_tab,gate_tab=st.tabs(['Ask the Agent','KG Explorer','Population Intelligence','Evidence Explorer','Intelligence Report','Validation'])
 with ask_tab:
-    st.subheader('Integrated evidence-grounded investigation')
+    st.subheader('Question-directed evidence-grounded investigation')
     sample=st.selectbox('Example investigations',SAFE_QUESTIONS + [
         'Investigate the clinical evidence, population characteristics, and potential treatment opportunity for finerenone (Kerendia) in patients with chronic kidney disease and type 2 diabetes. Identify what is established, what is uncertain, and what additional evidence would be required.'])
     question=st.text_area('Question',value=sample,height=105,key='question')
     fetch=st.checkbox('Retrieve live PubMed and ClinicalTrials.gov evidence',value=True,
         help='Uses verified HTTPS sources. A connection failure is reported, never filled with invented records.')
     if st.button('Investigate',type='primary',key='ask'):
-        with st.spinner('Inspecting KG and population evidence; retrieving real literature when selected...'):
-            try:st.session_state['v761_bundle']=build_investigation(question,fetch_live=fetch)
+        with st.spinner('Routing the question and retrieving only relevant evidence...'):
+            try:st.session_state['v77_bundle']=build_investigation(question,fetch_live=fetch)
             except Exception as exc:st.error('Investigation could not complete: '+str(exc))
-    if 'v761_bundle' in st.session_state:
-        b=st.session_state['v761_bundle']
-        st.info('Status: '+b['status']+' — supported findings are shown even when individual conclusions are blocked.')
+    if 'v77_bundle' in st.session_state:
+        b=st.session_state['v77_bundle']
+        st.info('Question intent: '+b.get('intent','INTEGRATED')+' | Status: '+b['status']+' — supported findings remain visible.')
         for section in b['sections']:
             st.markdown('### '+section['title'])
             st.markdown(section['text'])
             if section['citations']:st.caption('Evidence IDs: '+', '.join(section['citations']))
         with st.expander('Technical tool execution and full source provenance'):
             st.json(b['technical_trace'])
-        st.download_button('Download investigation (.md)',to_markdown(b),'Healthcare_Intelligence_Investigation_V7_6_1.md','text/markdown')
-    st.caption('Transparent bounded tool orchestration, not an autonomous LLM. Only unsupported claims are blocked; supported findings remain visible.')
+        st.download_button('Download investigation (.md)',to_markdown(b),'Healthcare_Intelligence_Investigation_V7_7_1.md','text/markdown')
+    st.caption('Population-only questions bypass PubMed, ClinicalTrials.gov, and KG traversal even when live retrieval is checked. Transparent bounded tool orchestration, not an autonomous LLM. Only unsupported claims are blocked; supported findings remain visible.')
 with graph_tab:
     st.subheader('Read-only clinical knowledge graph')
     term=st.text_input('Find concepts',value='kidney')
@@ -98,16 +98,16 @@ with lit_tab:
             with st.expander('Retrieval provenance'):st.json(record)
 with report_tab:
     st.subheader('Source-linked intelligence report')
-    if 'v761_bundle' not in st.session_state:
+    if 'v77_bundle' not in st.session_state:
         st.info('Use “Ask the Agent” to run an integrated investigation first.')
     else:
-        bundle=st.session_state['v761_bundle']
+        bundle=st.session_state['v77_bundle']
         markdown=to_markdown(bundle)
         st.markdown(markdown)
-        st.download_button('Download report (.md)',markdown,'Healthcare_Intelligence_Report_V7_6_1.md','text/markdown')
-        st.download_button('Download evidence JSON',json.dumps(bundle,indent=2,default=str),'Healthcare_Intelligence_Evidence_V7_6_1.json','application/json')
+        st.download_button('Download report (.md)',markdown,'Healthcare_Intelligence_Report_V7_7_2.md','text/markdown')
+        st.download_button('Download evidence JSON',json.dumps(bundle,indent=2,default=str),'Healthcare_Intelligence_Evidence_V7_7_2.json','application/json')
 with gate_tab:
     st.subheader('Validation and evidence limitations')
     st.json(report())
-    st.warning('V7.6.1 is a controlled functional demonstration, not a research-validated or clinical-grade system. External API verification requires network access.')
+    st.warning('V7.7.2 is a controlled functional demonstration, not a research-validated or clinical-grade system. External API verification requires network access.')
     st.caption('No GitHub access, cloning, pushing, deployment, or original KG modification is performed by this application.')

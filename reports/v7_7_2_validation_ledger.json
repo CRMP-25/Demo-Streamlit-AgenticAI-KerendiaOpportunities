@@ -1,0 +1,17 @@
+{
+  "version": "V7.7.2",
+  "scope": "controlled functional demo",
+  "population_only_expected": {
+    "estimate": 9233798,
+    "prevalence_percent_rounded": 4.2009,
+    "count_ci_95": [
+      7843384,
+      10624212
+    ],
+    "survey_weight": "WTPH2YR",
+    "unweighted_cases": 283,
+    "complete_case_denominator": 5143
+  },
+  "claims": "PREVIOUSLY_DERIVED_NOT_INDEPENDENTLY_VALIDATED",
+  "cloud_gui": "PENDING_USER_ACCEPTANCE"
+}
