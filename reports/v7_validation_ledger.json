@@ -1,0 +1,58 @@
+{
+  "project": "Healthcare KG Agentic Intelligence",
+  "date": "2026-10-25",
+  "release_status": "CONDITIONAL_RESEARCH_PROTOTYPE_NOT_SCIENTIFICALLY_APPROVED",
+  "local_regression_tests": 28,
+  "local_regression_result": "PASS",
+  "stages": [
+    {
+      "stage": "V7.0",
+      "scope": "Local integration, original KG hash, weights, regression",
+      "status": "PASS_LOCAL_WITH_LIMITATIONS",
+      "limitation": "Original raw NHANES downloads and R survey execution not independently reproduced"
+    },
+    {
+      "stage": "V7.1",
+      "scope": "Bounded multi-tool investigation, provenance and policy",
+      "status": "PASS_LOCAL_PROTOTYPE",
+      "limitation": "Not LLM-based autonomous planning; clinical inference restricted"
+    },
+    {
+      "stage": "V7.2",
+      "scope": "Real PubMed and ClinicalTrials.gov API connectors",
+      "status": "BLOCKED_EXTERNAL_VERIFICATION",
+      "limitation": "Outbound HTTPS unavailable; live source retrieval could not be tested"
+    },
+    {
+      "stage": "V7.3",
+      "scope": "Population period retrieval and hypothetical arithmetic scenarios",
+      "status": "PASS_LOCAL_WITH_LIMITATIONS",
+      "limitation": "Not a fresh survey computation; scenarios are not clinical eligibility"
+    },
+    {
+      "stage": "V7.4",
+      "scope": "Streamlit app code and source inspection",
+      "status": "IMPLEMENTED_NOT_UI_TESTED",
+      "limitation": "Streamlit GUI not browser tested; optional dependency"
+    },
+    {
+      "stage": "V7.5",
+      "scope": "Regression, release ledger, evidence policy, manifest",
+      "status": "PASS_LOCAL_NOT_SCIENTIFIC_RELEASE",
+      "limitation": "Scientific and external gates outstanding"
+    }
+  ],
+  "live_api_status": {
+    "pubmed": "UNAVAILABLE",
+    "trials": "UNAVAILABLE"
+  },
+  "scientific_blocks": [
+    "Unreviewed clinical mappings",
+    "Cross-cycle serum creatinine comparability",
+    "External epidemiological validation",
+    "Raw NHANES and R survey rerun",
+    "Verified live biomedical API integration"
+  ],
+  "github": "No GitHub access by V7 code or execution",
+  "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf"
+}

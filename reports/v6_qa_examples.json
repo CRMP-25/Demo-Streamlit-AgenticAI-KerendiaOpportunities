@@ -1,0 +1,230 @@
+[
+  {
+    "question": "How many US adults have CKD and diabetes?",
+    "route": "population",
+    "status": "SCREENING_ESTIMATE_WITH_CAVEATS",
+    "answer": "NHANES 2021-2023 (primary) estimates 9,233,798 U.S. adults (reported 95% CI 7,843,384–10,624,212) meeting the notebook-defined single-visit CKD screen and probable T2D proxy. Complete-case screening prevalence: 4.20%. Weight: WTPH2YR. Epidemiological review is required. This is not confirmed disease, treatment eligibility, or a validated trend.",
+    "evidence": [
+      {
+        "kind": "population_observation",
+        "id": "NHANES_2021_2023_PRIMARY",
+        "source": "CDC NHANES",
+        "period": "2021-2023",
+        "scenario": "primary",
+        "validation": "REVIEW_REQUIRED"
+      }
+    ],
+    "trace": [
+      {
+        "step": "intent_router",
+        "route": "population"
+      },
+      {
+        "step": "population_lookup",
+        "observation_id": "NHANES_2021_2023_PRIMARY"
+      }
+    ],
+    "limitations": [
+      "Epidemiological validation pending",
+      "Human review of 16 concept mappings pending",
+      "Cross-cycle serum creatinine comparability pending"
+    ]
+  },
+  {
+    "question": "What is the estimated prevalence of CKD and probable T2D?",
+    "route": "population",
+    "status": "SCREENING_ESTIMATE_WITH_CAVEATS",
+    "answer": "NHANES 2021-2023 (primary) estimates 9,233,798 U.S. adults (reported 95% CI 7,843,384–10,624,212) meeting the notebook-defined single-visit CKD screen and probable T2D proxy. Complete-case screening prevalence: 4.20%. Weight: WTPH2YR. Epidemiological review is required. This is not confirmed disease, treatment eligibility, or a validated trend.",
+    "evidence": [
+      {
+        "kind": "population_observation",
+        "id": "NHANES_2021_2023_PRIMARY",
+        "source": "CDC NHANES",
+        "period": "2021-2023",
+        "scenario": "primary",
+        "validation": "REVIEW_REQUIRED"
+      }
+    ],
+    "trace": [
+      {
+        "step": "intent_router",
+        "route": "population"
+      },
+      {
+        "step": "population_lookup",
+        "observation_id": "NHANES_2021_2023_PRIMARY"
+      }
+    ],
+    "limitations": [
+      "Epidemiological validation pending",
+      "Human review of 16 concept mappings pending",
+      "Cross-cycle serum creatinine comparability pending"
+    ]
+  },
+  {
+    "question": "How many patients are eligible for Kerendia?",
+    "route": "eligibility_guard",
+    "status": "BLOCKED_UNSUPPORTED_ELIGIBILITY",
+    "answer": "BLOCKED: These NHANES observations are single-visit CKD laboratory screening plus probable T2D proxies; they do not establish Kerendia eligibility, contraindications, treatment utilization, or addressable market. No eligible-patient count can be derived from this layer.",
+    "evidence": [],
+    "trace": [
+      {
+        "step": "intent_router",
+        "route": "eligibility_guard"
+      }
+    ],
+    "limitations": [
+      "Epidemiological validation pending",
+      "Human review of 16 concept mappings pending",
+      "Cross-cycle serum creatinine comparability pending"
+    ]
+  },
+  {
+    "question": "What is the addressable market for finerenone?",
+    "route": "eligibility_guard",
+    "status": "BLOCKED_UNSUPPORTED_ELIGIBILITY",
+    "answer": "BLOCKED: These NHANES observations are single-visit CKD laboratory screening plus probable T2D proxies; they do not establish Kerendia eligibility, contraindications, treatment utilization, or addressable market. No eligible-patient count can be derived from this layer.",
+    "evidence": [],
+    "trace": [
+      {
+        "step": "intent_router",
+        "route": "eligibility_guard"
+      }
+    ],
+    "limitations": [
+      "Epidemiological validation pending",
+      "Human review of 16 concept mappings pending",
+      "Cross-cycle serum creatinine comparability pending"
+    ]
+  },
+  {
+    "question": "What is the CKD trend across cycles?",
+    "route": "trend_guard",
+    "status": "BLOCKED_UNVALIDATED_TREND",
+    "answer": "BLOCKED: A population trend cannot be inferred until serum-creatinine and laboratory comparability, differing NHANES survey periods, and missing-data assumptions are validated. Cross-cycle numbers are not evidence of a trend.",
+    "evidence": [],
+    "trace": [
+      {
+        "step": "intent_router",
+        "route": "trend_guard"
+      }
+    ],
+    "limitations": [
+      "Epidemiological validation pending",
+      "Human review of 16 concept mappings pending",
+      "Cross-cycle serum creatinine comparability pending"
+    ]
+  },
+  {
+    "question": "Explain chronic kidney disease evidence in the KG",
+    "route": "clinical_retrieval",
+    "status": "RETRIEVAL_ONLY_NOT_CLINICALLY_VERIFIED",
+    "answer": "Relevant nodes found in the baseline clinical KG (retrieval only, not an independently validated clinical answer): D13: Cardiovascular-kidney-metabolic (CKM) syndrome represents the interconnected pathophysiology of metabolic risk factors, chronic kidney disease (CKD), and cardiovascular disease.; D14: Chronic kidney disease (CKD) is a condition that contributes to the progression of cardiovascular-kidney-metabolic syndrome.; D19: Chronic Kidney Disease; D22: Chronic Kidney Disease: a condition that can progress and affect cardiovascular health.. These matches do not establish clinical efficacy or causal evidence; inspect underlying publications before drawing conclusions.",
+    "evidence": [
+      {
+        "kind": "baseline_kg_node",
+        "id": "D13",
+        "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+        "description": "Cardiovascular-kidney-metabolic (CKM) syndrome represents the interconnected pathophysiology of metabolic risk factors, chronic kidney disease (CKD), and cardiovascular disease."
+      },
+      {
+        "kind": "baseline_kg_node",
+        "id": "D14",
+        "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+        "description": "Chronic kidney disease (CKD) is a condition that contributes to the progression of cardiovascular-kidney-metabolic syndrome."
+      },
+      {
+        "kind": "baseline_kg_node",
+        "id": "D19",
+        "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+        "description": "Chronic Kidney Disease"
+      },
+      {
+        "kind": "baseline_kg_node",
+        "id": "D22",
+        "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+        "description": "Chronic Kidney Disease: a condition that can progress and affect cardiovascular health."
+      }
+    ],
+    "trace": [
+      {
+        "step": "intent_router",
+        "route": "clinical_retrieval"
+      },
+      {
+        "step": "clinical_kg_lexical_retrieval",
+        "hits": 6
+      }
+    ],
+    "limitations": [
+      "Epidemiological validation pending",
+      "Human review of 16 concept mappings pending",
+      "Cross-cycle serum creatinine comparability pending"
+    ]
+  },
+  {
+    "question": "What does the KG contain about finerenone?",
+    "route": "clinical_retrieval",
+    "status": "RETRIEVAL_ONLY_NOT_CLINICALLY_VERIFIED",
+    "answer": "Relevant nodes found in the baseline clinical KG (retrieval only, not an independently validated clinical answer): D10: Heart failure (HF) is a condition that can be treated with finerenone, particularly in patients with a left ventricular ejection fraction (LVEF) greater than 40%.; D15: Heart failure (HF) is a condition that is studied in relation to the effects of finerenone.; DR11: Finerenone is a selective non-steroidal mineralocorticoid receptor antagonist that exhibits high MR affinity and minimal off-target steroidal effects.; DR13: Finerenone. These matches do not establish clinical efficacy or causal evidence; inspect underlying publications before drawing conclusions.",
+    "evidence": [
+      {
+        "kind": "baseline_kg_node",
+        "id": "D10",
+        "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+        "description": "Heart failure (HF) is a condition that can be treated with finerenone, particularly in patients with a left ventricular ejection fraction (LVEF) greater than 40%."
+      },
+      {
+        "kind": "baseline_kg_node",
+        "id": "D15",
+        "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+        "description": "Heart failure (HF) is a condition that is studied in relation to the effects of finerenone."
+      },
+      {
+        "kind": "baseline_kg_node",
+        "id": "DR11",
+        "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+        "description": "Finerenone is a selective non-steroidal mineralocorticoid receptor antagonist that exhibits high MR affinity and minimal off-target steroidal effects."
+      },
+      {
+        "kind": "baseline_kg_node",
+        "id": "DR13",
+        "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+        "description": "Finerenone"
+      }
+    ],
+    "trace": [
+      {
+        "step": "intent_router",
+        "route": "clinical_retrieval"
+      },
+      {
+        "step": "clinical_kg_lexical_retrieval",
+        "hits": 6
+      }
+    ],
+    "limitations": [
+      "Epidemiological validation pending",
+      "Human review of 16 concept mappings pending",
+      "Cross-cycle serum creatinine comparability pending"
+    ]
+  },
+  {
+    "question": "What is the population of Mars?",
+    "route": "out_of_scope",
+    "status": "OUT_OF_SCOPE",
+    "answer": "Out of scope for the available clinical KG and NHANES population observations. No answer is fabricated.",
+    "evidence": [],
+    "trace": [
+      {
+        "step": "intent_router",
+        "route": "out_of_scope"
+      }
+    ],
+    "limitations": [
+      "Epidemiological validation pending",
+      "Human review of 16 concept mappings pending",
+      "Cross-cycle serum creatinine comparability pending"
+    ]
+  }
+]

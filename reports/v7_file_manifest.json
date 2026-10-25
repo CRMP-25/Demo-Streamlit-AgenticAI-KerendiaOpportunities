@@ -1,0 +1,215 @@
+{
+  "generated_utc": "2026-10-25T10:41:16.666112+00:00",
+  "files": [
+    {
+      "path": "README.md",
+      "size_bytes": 2396,
+      "sha256": "d0c3ee8c4f465a3cbc0b2e9b5adbafa258bff3f0c20adc6fb3b40687b11ddc1f"
+    },
+    {
+      "path": "README_V7.md",
+      "size_bytes": 2219,
+      "sha256": "c48098ec8d338ae22c1ef2ac52c0e9cb507dec97c83d9ff304da3ab8d99dd88f"
+    },
+    {
+      "path": "app.py",
+      "size_bytes": 1612,
+      "sha256": "f37cdc8cc6b105d907c752a2af4c357d97bbf384827b7728d024f2687ac07d2f"
+    },
+    {
+      "path": "data/baseline_kg_COPY.json",
+      "size_bytes": 70520,
+      "sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf"
+    },
+    {
+      "path": "data/clinical_link_adjudication.csv",
+      "size_bytes": 37021,
+      "sha256": "fe50b77860edba5081b4960d0b0f84d86e60f47bc1fc37f7e16996e139cc14f1"
+    },
+    {
+      "path": "data/population_kg_layer.json",
+      "size_bytes": 21012,
+      "sha256": "4e1756f7c25dd27e0d8e57353237c5a1b43a023497a67d6229fdc2286ee3f482"
+    },
+    {
+      "path": "data/population_observations.json",
+      "size_bytes": 7834,
+      "sha256": "c3f4fe714ec3b41dc296f8367a42345870dc7013f068ef295f7ac9fb090771a4"
+    },
+    {
+      "path": "docs/PROJECT_EXECUTION_RECORD.docx",
+      "size_bytes": 41907,
+      "sha256": "3453e4a3d773a8acd1289ff29d6b4d3358bfab5d1b85209c3d72359e4d26728a"
+    },
+    {
+      "path": "docs/PROJECT_EXECUTION_RECORD.md",
+      "size_bytes": 11021,
+      "sha256": "c8220018ad93f7c7e84778209388a3e20869d024dd017bda99b688d9b98dac79"
+    },
+    {
+      "path": "evidence/Healthcare_KG_V5_1_Outputs.zip",
+      "size_bytes": 25142,
+      "sha256": "5c1b42e62a88e079846903ac8343839c9566ac7409fb4d6e6f7727258cbff049"
+    },
+    {
+      "path": "evidence/Healthcare_KG_V5_Outputs.zip",
+      "size_bytes": 24588,
+      "sha256": "913bfbebad741979ae436bd7ce2310709cab9b987c0d72ae9a77396fa02250e6"
+    },
+    {
+      "path": "evidence/Healthcare_KG_V6_Outputs.zip",
+      "size_bytes": 5934,
+      "sha256": "823b401c3aeae89790c4432ba6688ea7497623756be811254182ba171b77e425"
+    },
+    {
+      "path": "notebooks/Healthcare_KG_Master_Consolidated.ipynb",
+      "size_bytes": 2706,
+      "sha256": "1a43fc8c766fb61fee96025131c0bf8597c7e1168149f1b181600f13192ca629"
+    },
+    {
+      "path": "notebooks/Healthcare_KG_V7_Master.ipynb",
+      "size_bytes": 1404,
+      "sha256": "9ef85e5508cfeb6e83ea4ecd042d8d056636ee0fcee8437e4446c541a87af436"
+    },
+    {
+      "path": "notebooks/history/24Oct26_Healthcare_KG_Population_Intelligence_V1.ipynb",
+      "size_bytes": 15258,
+      "sha256": "5c7d98dc2c0af7d8498c8e40e5319a41941b3f99fe4dee5fa0c44114e1896b5e"
+    },
+    {
+      "path": "notebooks/history/Healthcare_KG_Population_Intelligence_V2.ipynb",
+      "size_bytes": 16866,
+      "sha256": "db162c0ee12594189e2f57eb71c2486b361922c333bcf657871d0d4110f9f6b6"
+    },
+    {
+      "path": "notebooks/history/Healthcare_KG_Population_Intelligence_V3.ipynb",
+      "size_bytes": 23387,
+      "sha256": "005dc54ec5e79592f79f9bf2fcf1dd1619fdae29a84f114b32828d40a80efa34"
+    },
+    {
+      "path": "notebooks/history/Healthcare_KG_Population_Intelligence_V3_1.ipynb",
+      "size_bytes": 18019,
+      "sha256": "39001fc88ea425f79e283c9e9fdec00b86c3339f48b0bb3f7fa667d36d7e8f6b"
+    },
+    {
+      "path": "notebooks/history/Healthcare_KG_Population_Intelligence_V3_1_GeminiCorrected.ipynb",
+      "size_bytes": 38682,
+      "sha256": "dd05fc424f38e93884645d49be7a41f241637e9c0db6063110ccc4c2491427b5"
+    },
+    {
+      "path": "notebooks/history/Healthcare_KG_Population_Intelligence_V4.ipynb",
+      "size_bytes": 23817,
+      "sha256": "efdb1133dab046ca6617ffb45a25368d68c765d32a64f4b65ea2e66cc2067283"
+    },
+    {
+      "path": "notebooks/history/Healthcare_KG_Population_Intelligence_V4_1.ipynb",
+      "size_bytes": 27899,
+      "sha256": "3a7f3fabd6f6435f3a76d23f9070755b19fefc59980e250c4e639c3307f85bf3"
+    },
+    {
+      "path": "notebooks/history/Healthcare_KG_Population_Intelligence_V4_2.ipynb",
+      "size_bytes": 23379,
+      "sha256": "913b6b9f593b61aadadd6cf080c3f67fb682757c72735dd1a448c9a322d9e5ab"
+    },
+    {
+      "path": "notebooks/history/Healthcare_KG_Population_Intelligence_V5.ipynb",
+      "size_bytes": 18684,
+      "sha256": "1b9acfd06ba2528c53e9b481a79557b0d4c4a91f2a92cd4b17e24e1d077d62b3"
+    },
+    {
+      "path": "notebooks/history/Healthcare_KG_Population_Intelligence_V5_1.ipynb",
+      "size_bytes": 17284,
+      "sha256": "3e85d9ba8b8645b774319b074eb2a13216c23c20c9ea23f893895ddbf34bb326"
+    },
+    {
+      "path": "notebooks/history/Healthcare_KG_Population_Intelligence_V6.ipynb",
+      "size_bytes": 15264,
+      "sha256": "31e1c581c7dd531e3210d244ecc07875434c2fdd87f093a6d09997f736981b74"
+    },
+    {
+      "path": "reports/consolidation_validation.json",
+      "size_bytes": 460,
+      "sha256": "725154c733f0ddf01422693d09e11bb159be5eaa5aa9df1f1011cc3e15d0f92e"
+    },
+    {
+      "path": "reports/v5_1_validation_report.json",
+      "size_bytes": 1454,
+      "sha256": "f8674d2354898711bc9f86dc200b4ec3e4ca802cf9b0d2a018b6dd776d5fa7f6"
+    },
+    {
+      "path": "reports/v6_qa_examples.json",
+      "size_bytes": 10003,
+      "sha256": "78848cad1c07126291c76c60b504e4534169d3034d2d2bf13fbc89c1a96539af"
+    },
+    {
+      "path": "reports/v6_validation_report.json",
+      "size_bytes": 1442,
+      "sha256": "a9675dea60bcd6755eb4669689a5d3475ebada4f9be2376e3d826f05aaa17124"
+    },
+    {
+      "path": "reports/v7_execution_log.txt",
+      "size_bytes": 2053,
+      "sha256": "252657a9266d57c48b0beff4a651cb31299408d6c4112ba6879571149662f2f4"
+    },
+    {
+      "path": "reports/v7_investigation_examples.json",
+      "size_bytes": 8479,
+      "sha256": "79c241d116c7319bea691bc332c34fa638739c80784116c17d70dc86768d89cc"
+    },
+    {
+      "path": "reports/v7_live_api_attempt.json",
+      "size_bytes": 456,
+      "sha256": "d8c642b9aba58c7c1771d6ca207fe631759c498a814f076136284aabc2554d64"
+    },
+    {
+      "path": "reports/v7_local_gates.json",
+      "size_bytes": 859,
+      "sha256": "6681651ef6faab2362f80abfd898e9ac6b2480a853ddf19374e5623a473097fd"
+    },
+    {
+      "path": "reports/v7_validation_ledger.json",
+      "size_bytes": 2164,
+      "sha256": "289f6a6129a9d383fa0f64b9e6944668148517084c05e5340979b8af31845c34"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 143,
+      "sha256": "2c3c4d358e5064902a5a7c14403c25023006f67ae1811a7cf8e6519eb6cd36bb"
+    },
+    {
+      "path": "requirements_v7.txt",
+      "size_bytes": 77,
+      "sha256": "84ff5ad9fa5d05e7512407145bc1e8c1d4cea6c61c8aed77ddada3f5aee5ac34"
+    },
+    {
+      "path": "src/__init__.py",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/engine.py",
+      "size_bytes": 2937,
+      "sha256": "7323081400a3abb215e4a2f088c306cfdddcf122cc4ae2be8a7643a851f3cc0f"
+    },
+    {
+      "path": "src/release.py",
+      "size_bytes": 1669,
+      "sha256": "ba543da9535ff60bb43c586a16912f5174135cc8012f22fa546d2f26b1fd6da5"
+    },
+    {
+      "path": "src/v7.py",
+      "size_bytes": 9338,
+      "sha256": "1c055ff672e3a5f257a47a3ee3d7fb3523b14ea447eba70b88c41b998e3feafe"
+    },
+    {
+      "path": "tests/test_regression.py",
+      "size_bytes": 1456,
+      "sha256": "8e27ff9ba23795eef52c02f124e8a97f1ceb05dff66bd96fa3010df22bfa0bcc"
+    },
+    {
+      "path": "tests/test_v7.py",
+      "size_bytes": 2557,
+      "sha256": "09f893a8a229bfb6ab5422a7a7bd3490a6fdbc454f87ae45b7b402c4ddeeced0"
+    }
+  ]
+}

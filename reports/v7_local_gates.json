@@ -1,0 +1,24 @@
+{
+  "timestamp_utc": "2026-10-25T10:41:16.552529+00:00",
+  "status": "PASS_LOCAL_EVIDENCE_GATES",
+  "checks": {
+    "clinical_baseline_sha256": true,
+    "baseline_nodes_293": true,
+    "baseline_edges_517": true,
+    "population_observations_4": true,
+    "clinical_mapping_candidates_88": true,
+    "correct_2021_2023_weight": true,
+    "correct_2017_2018_weight": true,
+    "no_human_approved_links": true
+  },
+  "scientific_release": "NOT_APPROVED",
+  "open_scientific_gates": [
+    "Raw NHANES reprocessing not independently rerun",
+    "R survey cross-check not independently rerun",
+    "Cross-cycle creatinine comparability not established",
+    "Clinical mappings not human approved",
+    "External epidemiological validation pending"
+  ],
+  "network_retrieval": "UNVERIFIED_IN_CURRENT_ENVIRONMENT",
+  "production_github_accessed_by_v7_code": false
+}

@@ -1,0 +1,24 @@
+{
+  "release": "V7.6",
+  "release_type": "CONTROLLED_FUNCTIONAL_DEMONSTRATION",
+  "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+  "tests_passed": 38,
+  "tests_failed": 0,
+  "gates": {
+    "G1_KG_immutable": "PASS",
+    "G2_no_simulated_scientific_evidence": "PASS_FOR_LOCAL_ARTIFACTS",
+    "G3_population_numeric_fidelity": "PASS_STORED_SOURCE_ARTIFACTS",
+    "G4_live_PubMed_and_trials_authentication": "BLOCKED_NETWORK",
+    "G5_unsupported_claims_blocked": "PASS_LOCAL_TESTS",
+    "G6_Streamlit_launch_and_interactive_browser": "NOT_RUN_STREAMLIT_NOT_INSTALLED"
+  },
+  "offline_preview": "GENERATED_WITH_REAL_PRESERVED_EVIDENCE",
+  "streamlit_source": "COMPILED_AND_BACKEND_TESTED_NOT_LAUNCHED",
+  "limitations": [
+    "Live API connectivity unavailable",
+    "Streamlit not installed in local runtime; GUI launch not verified",
+    "Original NHANES source statistics not independently recomputed",
+    "Clinical mapping review and cross-cycle trends remain blocked"
+  ],
+  "github": "NOT_ACCESSED_OR_MODIFIED"
+}

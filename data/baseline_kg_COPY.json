@@ -1,0 +1,4113 @@
+{
+  "expansion_log": [
+    {
+      "ts": "2026-10-23T02:13:19.306966",
+      "type": "expansion",
+      "source": "literature",
+      "summary": "3 nodes, 4 edges"
+    },
+    {
+      "ts": "2026-10-23T02:15:00.206051",
+      "type": "expansion",
+      "source": "database",
+      "summary": "2 nodes, 2 edges"
+    },
+    {
+      "ts": "2026-10-23T09:38:21.341575",
+      "type": "expansion",
+      "source": "literature",
+      "summary": "6 nodes, 7 edges"
+    },
+    {
+      "ts": "2026-10-23T09:38:35.038241",
+      "type": "expansion",
+      "source": "literature",
+      "summary": "6 nodes, 6 edges"
+    },
+    {
+      "ts": "2026-10-23T09:38:47.067788",
+      "type": "expansion",
+      "source": "literature",
+      "summary": "6 nodes, 6 edges"
+    },
+    {
+      "ts": "2026-10-23T09:38:58.836433",
+      "type": "expansion",
+      "source": "literature",
+      "summary": "5 nodes, 6 edges"
+    },
+    {
+      "ts": "2026-10-23T11:10:36.793998+00:00",
+      "type": "expansion",
+      "source": "pubmed_daily",
+      "summary": "39 nodes, 49 edges"
+    },
+    {
+      "ts": "2026-10-23T14:22:29.693629+00:00",
+      "type": "expansion",
+      "source": "pubmed_daily",
+      "summary": "204 nodes, 388 edges"
+    },
+    {
+      "ts": "2026-10-24T02:53:17.098824+00:00",
+      "type": "expansion",
+      "source": "pubmed_daily",
+      "summary": "1 nodes, 9 edges"
+    }
+  ],
+  "nodes": [
+    [
+      "D1",
+      "disease",
+      "Type 2 Diabetes Mellitus: chronic metabolic disorder, insulin resistance, hyperglycaemia, HbA1c >6.5%, linked to obesity and cardiovascular risk."
+    ],
+    [
+      "D2",
+      "disease",
+      "Heart Failure with reduced Ejection Fraction (HFrEF): EF <40%, dyspnoea, oedema, neurohormonal activation. Major cause of hospitalisation."
+    ],
+    [
+      "D3",
+      "disease",
+      "Hypertension: sustained systolic BP >130 mmHg, silent target-organ damage, major risk factor for stroke, myocardial infarction, and CKD."
+    ],
+    [
+      "D4",
+      "disease",
+      "Chronic Kidney Disease stage 3b: GFR 30-44, proteinuria, cardiorenal syndrome, accelerated cardiovascular risk."
+    ],
+    [
+      "DR1",
+      "drug",
+      "Metformin: first-line T2DM drug, lowers hepatic glucose output, AMPK activation, weight-neutral, renal dose adjustment needed."
+    ],
+    [
+      "DR2",
+      "drug",
+      "Empagliflozin: SGLT2-inhibitor, glucosuria, cardiorenal protection, FDA-approved for heart failure and CKD regardless of diabetes status."
+    ],
+    [
+      "DR3",
+      "drug",
+      "Lisinopril: ACE inhibitor, reduces angiotensin II, lowers BP, first-line for HFrEF, reduces proteinuria in CKD."
+    ],
+    [
+      "DR4",
+      "drug",
+      "SGLT2-inhibitor class: renal glucose excretion, natriuresis, cardiac preload/afterload reduction; benefit in CKD and HF independent of glycaemia."
+    ],
+    [
+      "DR5",
+      "drug",
+      "Carvedilol: non-selective beta-blocker with alpha-1 blockade, reduces mortality in HFrEF, controls HR, mild antihypertensive effect."
+    ],
+    [
+      "S1",
+      "symptom",
+      "Polyuria and polydipsia: hallmark osmotic symptoms of hyperglycaemia."
+    ],
+    [
+      "S2",
+      "symptom",
+      "Headache and dizziness: common in uncontrolled hypertension."
+    ],
+    [
+      "S3",
+      "symptom",
+      "Exertional dyspnoea and ankle oedema: cardinal symptoms of heart failure."
+    ],
+    [
+      "S4",
+      "symptom",
+      "Fatigue and reduced exercise tolerance: multi-disease symptom overlap seen in CKD anaemia, HF, and poorly controlled diabetes."
+    ],
+    [
+      "G1",
+      "gene",
+      "TCF7L2: strongest T2DM susceptibility gene; impairs beta-cell GLP-1 signalling."
+    ],
+    [
+      "G2",
+      "gene",
+      "ACE (angiotensin-converting enzyme): polymorphisms alter RAS activity, hypertension susceptibility, and ACE-inhibitor response."
+    ],
+    [
+      "G3",
+      "gene",
+      "NPPA/NPPB (natriuretic peptides): BNP elevation diagnostic for HFrEF, guides diuretic titration."
+    ],
+    [
+      "G4",
+      "gene",
+      "SLC5A2 (SGLT2 transporter gene): direct molecular target of empagliflozin and the SGLT2-inhibitor drug class."
+    ],
+    [
+      "N1",
+      "note",
+      "Patient 1: 58F, T2DM 12y, HbA1c 8.1%, BMI 31. Started on metformin 500mg BD, counselled on lifestyle. Annual renal function monitoring advised."
+    ],
+    [
+      "N2",
+      "note",
+      "Patient 2: 71M, HFrEF EF 32%, NYHA III. On lisinopril 10mg, carvedilol 25mg. Uptitrated to 80mg. Exertional chest pain - stress echo ordered."
+    ],
+    [
+      "N3",
+      "note",
+      "Patient 3: 65M, T2DM + CKD stage 3b + HTN. GFR 38. Empagliflozin added for cardiorenal protection. Metformin held pending GFR stabilisation."
+    ],
+    [
+      "N4",
+      "note",
+      "Patient 4: 55F, HTN + new microalbuminuria. Lisinopril started. Endocrinology referral placed to rule out secondary hypertension."
+    ],
+    [
+      "DR6",
+      "drug",
+      "Finerenone (Kerendia): non-steroidal mineralocorticoid receptor antagonist, reduces risk of sustained eGFR decline, end-stage kidney disease, and cardiovascular death in CKD with T2DM."
+    ],
+    [
+      "G5",
+      "gene",
+      "NR3C2 (mineralocorticoid receptor gene): receptor target for finerenone; blockades reduce inflammation and fibrosis."
+    ],
+    [
+      "D5",
+      "disease",
+      "End-stage kidney disease (ESKD): requiring chronic dialysis or kidney transplant, final stage of progressive CKD."
+    ],
+    [
+      "N6",
+      "note",
+      "Patient/Physician Experience: Finerenone (DR6) shows high patient compliance and daily tolerability compared to older MRAs. Hyperkalemia vigilance requires baseline potassium monitoring (<5.0 mmol/L) and periodic follow-up."
+    ],
+    [
+      "S6",
+      "symptom",
+      "Hyperkalemia (MRA-induced): elevation of serum potassium. DR6 carries a lower statistical risk of sudden potassium spikes than older steroidal MRAs."
+    ],
+    [
+      "D6",
+      "disease",
+      "Type 2 diabetes (T2D) significantly increases the risk of heart failure and death."
+    ],
+    [
+      "D7",
+      "disease",
+      "Chronic kidney disease (CKD) markedly increases the risk of heart failure and death."
+    ],
+    [
+      "DR7",
+      "drug",
+      "Finerenone improves outcomes in patients with Type 2 diabetes and chronic kidney disease."
+    ],
+    [
+      "DR8",
+      "drug",
+      "Steroidal mineralocorticoid receptor antagonists (MRAs) include spironolactone and eplerenone."
+    ],
+    [
+      "S7",
+      "symptom",
+      "New-onset heart failure (HF) was a secondary outcome in the study."
+    ],
+    [
+      "N7",
+      "note",
+      "The study evaluated finerenone versus steroidal MRAs in patients without prior heart failure."
+    ],
+    [
+      "D8",
+      "disease",
+      "Cardiovascular-kidney-metabolic (CKM) syndrome represents the interconnected pathophysiology of metabolic risk factors, chronic kidney disease (CKD), and cardiovascular disease."
+    ],
+    [
+      "D9",
+      "disease",
+      "Chronic kidney disease (CKD) is a condition that contributes to the progression of cardiovascular-kidney-metabolic syndrome."
+    ],
+    [
+      "D10",
+      "disease",
+      "Heart failure (HF) is a condition that can be treated with finerenone, particularly in patients with a left ventricular ejection fraction (LVEF) greater than 40%."
+    ],
+    [
+      "DR9",
+      "drug",
+      "Finerenone is a selective non-steroidal mineralocorticoid receptor antagonist that exhibits high affinity for the mineralocorticoid receptor."
+    ],
+    [
+      "N8",
+      "note",
+      "Recent data from FIND-CKD extend the utility of finerenone to non-diabetic chronic kidney disease."
+    ],
+    [
+      "N9",
+      "note",
+      "Various guidelines incorporate finerenone as an additive therapy for patients with persistent albuminuria on maximal renin-angiotensin system inhibition."
+    ],
+    [
+      "D11",
+      "disease",
+      "Type 2 diabetes is a chronic disease that affects how the body metabolizes sugar."
+    ],
+    [
+      "DR10",
+      "drug",
+      "Empagliflozin is a pharmacological treatment used to improve glycemic control in patients with type 2 diabetes."
+    ],
+    [
+      "D12",
+      "unknown",
+      "The Mediterranean diet (VegMedD) is a dietary intervention that may offer broader benefits for healthy ageing."
+    ],
+    [
+      "S8",
+      "symptom",
+      "Glycemic control is a critical measure of diabetes management, often assessed by HbA1c levels."
+    ],
+    [
+      "S9",
+      "symptom",
+      "Frailty is a condition that can affect older adults, often leading to increased vulnerability and health complications."
+    ],
+    [
+      "N10",
+      "note",
+      "The study highlights the economic implications of lifestyle interventions compared to pharmacological treatments in older adults."
+    ],
+    [
+      "D13",
+      "disease",
+      "Cardiovascular-kidney-metabolic (CKM) syndrome represents the interconnected pathophysiology of metabolic risk factors, chronic kidney disease (CKD), and cardiovascular disease."
+    ],
+    [
+      "D14",
+      "disease",
+      "Chronic kidney disease (CKD) is a condition that contributes to the progression of cardiovascular-kidney-metabolic syndrome."
+    ],
+    [
+      "D15",
+      "disease",
+      "Heart failure (HF) is a condition that is studied in relation to the effects of finerenone."
+    ],
+    [
+      "DR11",
+      "drug",
+      "Finerenone is a selective non-steroidal mineralocorticoid receptor antagonist that exhibits high MR affinity and minimal off-target steroidal effects."
+    ],
+    [
+      "N11",
+      "note",
+      "Recent data from FIND-CKD extend the utility of finerenone to non-diabetic CKD."
+    ],
+    [
+      "DR12",
+      "drug",
+      "SGLT2 inhibitors: a class of drugs with significant renoprotective potential for diabetic kidney disease."
+    ],
+    [
+      "D16",
+      "disease",
+      "Diabetic kidney disease: a complication of diabetes characterized by damage to the kidneys."
+    ],
+    [
+      "N12",
+      "note",
+      "This study conducted a bibliometric analysis of SGLT2 inhibitor treatment for diabetic kidney disease."
+    ],
+    [
+      "N13",
+      "note",
+      "The research focus has shifted to precision disease management and combination therapies."
+    ],
+    [
+      "D17",
+      "disease",
+      "Cardiovascular-kidney-metabolic (CKM) syndrome"
+    ],
+    [
+      "DR13",
+      "drug",
+      "Finerenone"
+    ],
+    [
+      "D18",
+      "disease",
+      "Type 2 Diabetes"
+    ],
+    [
+      "D19",
+      "disease",
+      "Chronic Kidney Disease"
+    ],
+    [
+      "DR14",
+      "drug",
+      "Empagliflozin"
+    ],
+    [
+      "N14",
+      "note",
+      "Decentralised response-guided trial"
+    ],
+    [
+      "S10",
+      "symptom",
+      "Urinary albumin-to-creatinine ratio (UACR)"
+    ],
+    [
+      "D20",
+      "disease",
+      "Type 2 Diabetes Mellitus"
+    ],
+    [
+      "DR15",
+      "drug",
+      "Sodium-glucose cotransporter 2 inhibitors"
+    ],
+    [
+      "N15",
+      "note",
+      "Virtual cardio-kidney-metabolic (CKM) prevention strategy"
+    ],
+    [
+      "N16",
+      "note",
+      "N-terminal pro-B-type natriuretic peptide (NT-proBNP) screening"
+    ],
+    [
+      "DR16",
+      "drug",
+      "Finerenone: a non-steroidal selective mineralocorticoid receptor antagonist with distinct pharmacological properties."
+    ],
+    [
+      "D21",
+      "disease",
+      "Cardiorenal disease: a pathophysiological continuum involving cardiac and renal injury."
+    ],
+    [
+      "D22",
+      "disease",
+      "Chronic Kidney Disease: a condition that can progress and affect cardiovascular health."
+    ],
+    [
+      "D23",
+      "disease",
+      "Heart Failure: a condition that can be influenced by mineralocorticoid receptor overactivation."
+    ],
+    [
+      "DR17",
+      "drug",
+      "Sodium-glucose cotransporter-2 inhibitors: a class of drugs that can be combined with finerenone."
+    ],
+    [
+      "DR18",
+      "drug",
+      "Dapagliflozin"
+    ],
+    [
+      "D24",
+      "disease",
+      "Anthracycline-associated cardiac changes"
+    ],
+    [
+      "S11",
+      "symptom",
+      "Left ventricular ejection fraction (LVEF)"
+    ],
+    [
+      "S12",
+      "symptom",
+      "N-terminal pro-B-type natriuretic peptide (NT-proBNP)"
+    ],
+    [
+      "S13",
+      "symptom",
+      "Galectin-3"
+    ],
+    [
+      "D25",
+      "disease",
+      "Bipolar Disorder (BD): a mental health condition characterized by extreme mood swings."
+    ],
+    [
+      "DR19",
+      "drug",
+      "Glucagon-like peptide-1 receptor agonists (GLP-1 RAs): a class of drugs that stimulate insulin secretion and inhibit glucagon release."
+    ],
+    [
+      "N17",
+      "note",
+      "Study examining risks of kidney replacement therapy (KRT) and healthcare utilization (HCU) among adults with BD and CKD stages 1-3."
+    ],
+    [
+      "D26",
+      "disease",
+      "Acute Kidney Injury (AKI)"
+    ],
+    [
+      "DR20",
+      "drug",
+      "Sodium-glucose co-transporter 2 inhibitors"
+    ],
+    [
+      "N18",
+      "note",
+      "Elderly patients with type 2 diabetes"
+    ],
+    [
+      "S14",
+      "symptom",
+      "Renal function decline"
+    ],
+    [
+      "S15",
+      "symptom",
+      "Genital infections"
+    ],
+    [
+      "S16",
+      "symptom",
+      "Major adverse cardiovascular events (MACE)"
+    ],
+    [
+      "DR21",
+      "drug",
+      "Sodium-glucose cotransporter 2 inhibitors (SGLT2i)"
+    ],
+    [
+      "N19",
+      "note",
+      "Study evaluating drug-related problems and nephrotoxic medication burden in CKD patients using SGLT2 inhibitors."
+    ],
+    [
+      "N20",
+      "note",
+      "Clinical pharmacist-led medication review identified 69 drug-related problems."
+    ],
+    [
+      "N21",
+      "note",
+      "Median number of nephrotoxic drugs per patient was 2."
+    ],
+    [
+      "N22",
+      "note",
+      "No clinically overt nephrotoxic events were observed during follow-up."
+    ],
+    [
+      "D27",
+      "disease",
+      "Chronic Kidney Disease stage G4-G5"
+    ],
+    [
+      "DR22",
+      "drug",
+      "4-pillar therapy"
+    ],
+    [
+      "DR23",
+      "drug",
+      "Renin-angiotensin system inhibitors"
+    ],
+    [
+      "DR24",
+      "drug",
+      "Glucagon-like peptide 1 receptor agonists"
+    ],
+    [
+      "N23",
+      "note",
+      "Implementation gap in advanced CKD"
+    ],
+    [
+      "D28",
+      "disease",
+      "Schizophrenia: a mental disorder characterized by persistent psychotic symptoms."
+    ],
+    [
+      "G6",
+      "gene",
+      "SLC22A1 (OCT1)"
+    ],
+    [
+      "G7",
+      "gene",
+      "SLC22A2 (OCT2)"
+    ],
+    [
+      "G8",
+      "gene",
+      "SLC22A3 (OCT3)"
+    ],
+    [
+      "G9",
+      "gene",
+      "SLC47A1 (MATE1)"
+    ],
+    [
+      "G10",
+      "gene",
+      "SLC47A2 (MATE2)"
+    ],
+    [
+      "G11",
+      "gene",
+      "ATM"
+    ],
+    [
+      "G12",
+      "gene",
+      "UGT1A9"
+    ],
+    [
+      "G13",
+      "gene",
+      "UGT2B4"
+    ],
+    [
+      "G14",
+      "gene",
+      "PNPLA3"
+    ],
+    [
+      "S17",
+      "symptom",
+      "Trimethylamine-N-oxide (TMAO) serum levels"
+    ],
+    [
+      "N24",
+      "note",
+      "Effects of SGLT-2 inhibitors on TMAO in T2D patients"
+    ],
+    [
+      "D29",
+      "disease",
+      "Hemoglobinopathies: a group of disorders characterized by abnormal hemoglobin."
+    ],
+    [
+      "D30",
+      "disease",
+      "Secondary diabetes mellitus: diabetes that occurs as a complication of another disease."
+    ],
+    [
+      "DR25",
+      "drug",
+      "SGLT-2 inhibitors: a class of drugs that can improve glycemic control."
+    ],
+    [
+      "DR26",
+      "drug",
+      "GLP-1 receptor agonists: a class of drugs that stimulate insulin secretion."
+    ],
+    [
+      "N25",
+      "note",
+      "The pathogenesis of DM in hemoglobinopathies involves iron-mediated β-cell apoptosis and hemolysis-driven insulin resistance."
+    ],
+    [
+      "N26",
+      "note",
+      "HbA1c is often inaccurate in patients with hemoglobinopathies due to various factors."
+    ],
+    [
+      "N27",
+      "note",
+      "Continuous Glucose Monitoring (CGM) metrics are valuable for glycemic monitoring."
+    ],
+    [
+      "N28",
+      "note",
+      "Basal-bolus insulin remains the cornerstone for diabetes management."
+    ],
+    [
+      "N29",
+      "note",
+      "Intensive iron chelation therapy can reverse early-stage dysglycemia."
+    ],
+    [
+      "N30",
+      "note",
+      "Multidisciplinary specialized care centers are essential for optimizing outcomes."
+    ],
+    [
+      "D31",
+      "disease",
+      "Frailty: a common condition in patients with severe aortic stenosis undergoing transcatheter aortic valve implantation."
+    ],
+    [
+      "N31",
+      "note",
+      "Aldosterone regulates sodium retention, potassium excretion, and blood pressure."
+    ],
+    [
+      "N32",
+      "note",
+      "Aldosterone-associated and mineralocorticoid receptor (MR)-mediated signaling is implicated in inflammation, oxidative stress, fibrosis, albuminuria, and progressive cardiorenal injury."
+    ],
+    [
+      "D32",
+      "disease",
+      "Chronic Kidney Disease (CKD) where persistent renin-angiotensin system (RAS) activation may sustain aldosterone exposure and MR activation."
+    ],
+    [
+      "DR27",
+      "drug",
+      "Mineralocorticoid receptor antagonists (MRAs) are therapeutic targets in defined CKD populations."
+    ],
+    [
+      "DR28",
+      "drug",
+      "Aldosterone synthase inhibitors (ASIs) are proposed for cardiorenal outcomes."
+    ],
+    [
+      "DR29",
+      "drug",
+      "SGLT2 inhibitors can be combined with MRAs."
+    ],
+    [
+      "N33",
+      "note",
+      "SGLT2 inhibitors show promise in critical care but are not established therapies."
+    ],
+    [
+      "N34",
+      "note",
+      "Cardiorenal benefits must be balanced against metabolic and hemodynamic risks."
+    ],
+    [
+      "DR30",
+      "drug",
+      "HRS-7535: a novel oral small-molecule glucagon-like peptide-1 receptor agonist."
+    ],
+    [
+      "D33",
+      "disease",
+      "Cardiovascular disease"
+    ],
+    [
+      "S18",
+      "symptom",
+      "Heart failure hospitalization"
+    ],
+    [
+      "S19",
+      "symptom",
+      "Cardiovascular death"
+    ],
+    [
+      "S20",
+      "symptom",
+      "Major adverse cardiovascular events"
+    ],
+    [
+      "S21",
+      "symptom",
+      "Myocardial infarction"
+    ],
+    [
+      "S22",
+      "symptom",
+      "Stroke"
+    ],
+    [
+      "S23",
+      "symptom",
+      "Composite kidney outcomes"
+    ],
+    [
+      "D34",
+      "disease",
+      "Type 2 diabetes mellitus complicated by chronic kidney disease"
+    ],
+    [
+      "DR31",
+      "drug",
+      "Semaglutide"
+    ],
+    [
+      "N35",
+      "note",
+      "Retrospective observational study of 126 patients with T2DM and CKD"
+    ],
+    [
+      "S24",
+      "symptom",
+      "Persistent hyperglycemia"
+    ],
+    [
+      "S25",
+      "symptom",
+      "Progressive renal impairment"
+    ],
+    [
+      "S26",
+      "symptom",
+      "Systemic inflammation"
+    ],
+    [
+      "S27",
+      "symptom",
+      "Increased risk of adverse clinical outcomes"
+    ],
+    [
+      "N36",
+      "note",
+      "Short-term improvements in glycemic control, inflammatory markers, and renal function-related indicators"
+    ],
+    [
+      "N37",
+      "note",
+      "Higher exploratory clinical response rate in combination group"
+    ],
+    [
+      "D35",
+      "disease",
+      "Diabetic Kidney Disease (DKD)"
+    ],
+    [
+      "S28",
+      "symptom",
+      "Hypomagnesemia"
+    ],
+    [
+      "DR32",
+      "drug",
+      "SGLT2 inhibitors"
+    ],
+    [
+      "N38",
+      "note",
+      "Magnesium is a cofactor in cellular energy metabolism and insulin signaling."
+    ],
+    [
+      "N39",
+      "note",
+      "Lower serum magnesium accompanies poorer glycemic control and an excess of cardiovascular and microvascular events."
+    ],
+    [
+      "N40",
+      "note",
+      "Prescribed oral repletion has been associated with fewer cardiovascular events in hypomagnesemic patients."
+    ],
+    [
+      "D36",
+      "disease",
+      "Transthyretin amyloid cardiomyopathy (ATTR-CM)"
+    ],
+    [
+      "D37",
+      "disease",
+      "Asthma: a chronic respiratory condition characterized by airway inflammation and hyperreactivity."
+    ],
+    [
+      "D38",
+      "disease",
+      "Metabolic dysfunction-associated steatotic liver disease (MASLD)"
+    ],
+    [
+      "DR33",
+      "drug",
+      "GLP-1 receptor agonist"
+    ],
+    [
+      "DR34",
+      "drug",
+      "Non-steroidal mineralocorticoid receptor antagonists (nsMRAs)"
+    ],
+    [
+      "N41",
+      "note",
+      "The five-stage model of CKM syndrome guides stage-specific prevention and treatment."
+    ],
+    [
+      "N42",
+      "note",
+      "Albuminuria and eGFR are markers of kidney damage and cardiovascular risk."
+    ],
+    [
+      "N43",
+      "note",
+      "Visceral adiposity and insulin resistance promote cardiovascular and kidney injury."
+    ],
+    [
+      "N44",
+      "note",
+      "Fragmented care and socioeconomic inequalities limit implementation of effective management."
+    ],
+    [
+      "D39",
+      "disease",
+      "Asymptomatic bacteriuria (ASB)"
+    ],
+    [
+      "N45",
+      "note",
+      "Higher prevalence of culture-detected ASB among SGLT2i users than non-users."
+    ],
+    [
+      "N46",
+      "note",
+      "Culture-detected ASB is distinct from symptomatic urinary tract infection (UTI)."
+    ],
+    [
+      "N47",
+      "note",
+      "Evidence generally does not show a clinically meaningful increase in symptomatic UTI with SGLT2i use."
+    ],
+    [
+      "N48",
+      "note",
+      "Single-time-point assessment cannot distinguish transient, persistent, or incident bacteriuria."
+    ],
+    [
+      "N49",
+      "note",
+      "Study did not determine if detecting ASB predicts clinically significant infection."
+    ],
+    [
+      "N50",
+      "note",
+      "Findings do not support routine urine screening in asymptomatic SGLT2i users."
+    ],
+    [
+      "D40",
+      "disease",
+      "Chronic Kidney Disease (CKD)"
+    ],
+    [
+      "DR35",
+      "drug",
+      "Sodium-glucose cotransporter 2 inhibitors (SGLT2 inhibitors)"
+    ],
+    [
+      "S29",
+      "symptom",
+      "Volume depletion-related adverse events"
+    ],
+    [
+      "S30",
+      "symptom",
+      "Urinary tract infection"
+    ],
+    [
+      "S31",
+      "symptom",
+      "Glycemic control"
+    ],
+    [
+      "S32",
+      "symptom",
+      "Body weight reduction"
+    ],
+    [
+      "S33",
+      "symptom",
+      "Lower systolic blood pressure"
+    ],
+    [
+      "N51",
+      "note",
+      "Systematic review and meta-analysis of SGLT2 inhibitors in diabetic CKD"
+    ],
+    [
+      "DR36",
+      "drug",
+      "Glucagon-like peptide-1-based therapies"
+    ],
+    [
+      "D41",
+      "disease",
+      "Heart failure"
+    ],
+    [
+      "DR37",
+      "drug",
+      "Dapagliflozin: a medication evaluated for its effects on multi-organ function in sepsis."
+    ],
+    [
+      "D42",
+      "disease",
+      "Sepsis: a life-threatening condition caused by the body's response to infection."
+    ],
+    [
+      "N52",
+      "note",
+      "The study evaluated the short-term efficacy and safety of dapagliflozin on multi-organ functions in patients with sepsis."
+    ],
+    [
+      "D43",
+      "disease",
+      "Hypertension"
+    ],
+    [
+      "DR38",
+      "drug",
+      "Aldosterone Synthase Inhibitors (ASIs)"
+    ],
+    [
+      "DR39",
+      "drug",
+      "Renin-Angiotensin-Aldosterone System (RAAS) Blockade"
+    ],
+    [
+      "DR40",
+      "drug",
+      "Sodium-Glucose Transport 2 (SGLT-2) Inhibitors"
+    ],
+    [
+      "DR41",
+      "drug",
+      "Glucagon-like Peptide-1 (GLP-1) Agonists"
+    ],
+    [
+      "N53",
+      "note",
+      "Cost-effectiveness analysis of dapagliflozin in CKD patients in Denmark."
+    ],
+    [
+      "DR42",
+      "drug",
+      "Glucagon-like peptide-1 receptor agonists (GLP-1 RA)"
+    ],
+    [
+      "N54",
+      "note",
+      "Impact of antidiabetic therapies on spermatogenesis and male reproductive function."
+    ],
+    [
+      "N55",
+      "note",
+      "Experimental evidence suggests metabolic dysfunction, oxidative stress, inflammation, apoptosis, and impaired Sertoli cell metabolism play a role in male reproductive dysfunction."
+    ],
+    [
+      "N56",
+      "note",
+      "SGLT2i and GLP-1 RA may improve sperm parameters and preserve testicular architecture."
+    ],
+    [
+      "N57",
+      "note",
+      "Emerging data suggest possible direct gonadal effects mediated through intracellular signaling pathways."
+    ],
+    [
+      "N58",
+      "note",
+      "Preliminary evidence suggests dual GIP/GLP-1 receptor agonists may benefit male reproductive health."
+    ],
+    [
+      "N59",
+      "note",
+      "Clinical evidence regarding the reproductive benefits of these therapies remains limited."
+    ],
+    [
+      "DR43",
+      "drug",
+      "Fixed-dose combination of metformin and empagliflozin"
+    ],
+    [
+      "D44",
+      "disease",
+      "Nephrolithiasis"
+    ],
+    [
+      "DR44",
+      "drug",
+      "Glucagon-like peptide-1 receptor agonists (GLP-1 RAs)"
+    ],
+    [
+      "DR45",
+      "drug",
+      "Sodium-glucose cotransporter-2 inhibitors (SGLT2is)"
+    ],
+    [
+      "D45",
+      "disease",
+      "HIV-associated nephropathy (HIVAN): kidney disease resulting from HIV infection."
+    ],
+    [
+      "D46",
+      "disease",
+      "Type 2 Diabetes Mellitus (T2DM)"
+    ],
+    [
+      "S34",
+      "symptom",
+      "Urinary Tract Infection (UTI)"
+    ],
+    [
+      "S35",
+      "symptom",
+      "Genital Tract Infection (GTI)"
+    ],
+    [
+      "DR46",
+      "drug",
+      "Dipeptidyl Peptidase-4 inhibitors (DPP-4i)"
+    ],
+    [
+      "D47",
+      "disease",
+      "Polycystic Ovary Syndrome (PCOS): a heterogeneous endocrine disorder characterized by hyperandrogenism, anovulation, ovarian dysfunction, and polycystic ovarian morphology."
+    ],
+    [
+      "S36",
+      "symptom",
+      "Hyperandrogenism: elevated levels of androgens in the body."
+    ],
+    [
+      "S37",
+      "symptom",
+      "Anovulation: absence of ovulation."
+    ],
+    [
+      "N60",
+      "note",
+      "Pathogenesis of PCOS involves neuroendocrine dysregulation, insulin resistance, and chronic inflammation."
+    ],
+    [
+      "DR47",
+      "drug",
+      "Kisspeptin pathways: emerging therapeutic target in PCOS."
+    ],
+    [
+      "DR48",
+      "drug",
+      "Neurokinin B receptor modulators: emerging therapeutic target in PCOS."
+    ],
+    [
+      "DR49",
+      "drug",
+      "Glucagon-like peptide (GLP-1) agonists: emerging therapeutic target in PCOS."
+    ],
+    [
+      "DR50",
+      "drug",
+      "Sodium-glucose cotransporter-2 (SGLT-2) inhibitors: emerging therapeutic target in PCOS."
+    ],
+    [
+      "D48",
+      "disease",
+      "Diabetic Nephropathy (DN): a leading cause of end-stage renal disease characterized by oxidative stress, chronic inflammation, and circadian rhythm disruption."
+    ],
+    [
+      "DR51",
+      "drug",
+      "GLP-1-based therapies"
+    ],
+    [
+      "DR52",
+      "drug",
+      "GLP-1 receptor agonists"
+    ],
+    [
+      "DR53",
+      "drug",
+      "Renin-angiotensin-aldosterone system inhibitors"
+    ],
+    [
+      "DR54",
+      "drug",
+      "Calcium channel blockers"
+    ],
+    [
+      "DR55",
+      "drug",
+      "Thiazide diuretics"
+    ],
+    [
+      "DR56",
+      "drug",
+      "Mineralocorticoid receptor antagonists (MRAs)"
+    ],
+    [
+      "DR57",
+      "drug",
+      "Nonsteroidal MRAs"
+    ],
+    [
+      "DR58",
+      "drug",
+      "Aldosterone synthase inhibitors"
+    ],
+    [
+      "DR59",
+      "drug",
+      "RNA-based therapies"
+    ],
+    [
+      "N61",
+      "note",
+      "Emerging pharmacologic strategies for BP management in CKD."
+    ],
+    [
+      "N62",
+      "note",
+      "Interventional strategies such as renal denervation and low-intensity shockwave intravascular lithotripsy."
+    ],
+    [
+      "N63",
+      "note",
+      "Therapies targeting inflammatory pathways and enhancing natriuretic peptide signaling."
+    ],
+    [
+      "N64",
+      "note",
+      "SPIRIT study assessed real-world treatment patterns, disease management, and quality of life among CKD patients in Greece."
+    ],
+    [
+      "DR60",
+      "drug",
+      "Sodium-glucose cotransporter 2 (SGLT2) inhibitors"
+    ],
+    [
+      "DR61",
+      "drug",
+      "Renin-angiotensin-aldosterone system (RAAS) inhibitors"
+    ],
+    [
+      "DR62",
+      "drug",
+      "Statins"
+    ],
+    [
+      "S38",
+      "symptom",
+      "Quality of Life (QoL)"
+    ],
+    [
+      "S39",
+      "symptom",
+      "Albuminuria"
+    ],
+    [
+      "N65",
+      "note",
+      "Survey on SGLT2 inhibitor use among Japanese general practitioners"
+    ],
+    [
+      "N66",
+      "note",
+      "Active User group and Passive User group classification based on SGLT2 inhibitor use"
+    ],
+    [
+      "N67",
+      "note",
+      "Factors associated with active use of SGLT2 inhibitors"
+    ],
+    [
+      "D49",
+      "disease",
+      "Anemia: a common complication of chronic kidney disease (CKD) associated with CKD progression and adverse outcomes."
+    ],
+    [
+      "DR63",
+      "drug",
+      "Hypoxia-inducible factor prolyl hydroxylase inhibitors: a class of oral drugs that stimulate endogenous erythropoietin production and improve iron metabolism."
+    ],
+    [
+      "DR64",
+      "drug",
+      "Erythropoiesis-stimulating agents (ESA): traditional treatment for anemia in CKD."
+    ],
+    [
+      "D50",
+      "disease",
+      "Nephrolithiasis: a condition characterized by the formation of stones in the kidney."
+    ],
+    [
+      "N68",
+      "note",
+      "SGLT2 inhibitors may influence stone formation through effects on glucosuria, natriuresis, urine volume, urinary citrate, pH, urate handling, and relative supersaturation."
+    ],
+    [
+      "DR65",
+      "drug",
+      "Sodium-glucose co-transporter 2 inhibitors (SGLT2i)"
+    ],
+    [
+      "D51",
+      "disease",
+      "Diabetic ketoacidosis (S-DKA)"
+    ],
+    [
+      "N69",
+      "note",
+      "Risk factors for S-DKA include female gender, indications with diabetes, high HbA1c levels, fasting, infection, and low BMI."
+    ],
+    [
+      "N70",
+      "note",
+      "The prediction nomogram demonstrated excellent discrimination for S-DKA risk."
+    ],
+    [
+      "S40",
+      "symptom",
+      "Glycosuria"
+    ],
+    [
+      "D52",
+      "disease",
+      "Chronic Kidney Disease (CKD): characterized by progressive loss of kidney function and increased risk of cardiovascular morbidity and mortality."
+    ],
+    [
+      "N71",
+      "note",
+      "Systematic review evaluating the effects of SGLT-2 inhibitors on CKD progression."
+    ],
+    [
+      "N72",
+      "note",
+      "SGLT-2 inhibitors demonstrated substantial renoprotective effects beyond glycemic control."
+    ],
+    [
+      "N73",
+      "note",
+      "SGLT-2 inhibitors consistently reduced CKD progression and major adverse kidney outcomes."
+    ],
+    [
+      "N74",
+      "note",
+      "SGLT-2 inhibitors were generally well tolerated and reduced the risk of acute kidney injury."
+    ],
+    [
+      "D53",
+      "disease",
+      "Mitral Valve Prolapse (MVP): affects 1-3% of the general population, largely considered benign."
+    ],
+    [
+      "D54",
+      "disease",
+      "Arrhythmic Mitral Valve Prolapse (aMVP): MVP associated with complex ventricular arrhythmias and sudden cardiac death."
+    ],
+    [
+      "S41",
+      "symptom",
+      "Complex ventricular arrhythmias (VAs): includes frequent premature ventricular contractions, non-sustained or sustained ventricular tachycardia, ventricular fibrillation."
+    ],
+    [
+      "D55",
+      "disease",
+      "Alzheimer's disease"
+    ],
+    [
+      "D56",
+      "disease",
+      "vascular dementia"
+    ],
+    [
+      "D57",
+      "disease",
+      "other dementia"
+    ],
+    [
+      "D58",
+      "disease",
+      "Diabetes"
+    ],
+    [
+      "N75",
+      "note",
+      "Racial and ethnic disparities in medication adherence among Medicare Advantage enrollees with diabetes."
+    ],
+    [
+      "D59",
+      "disease",
+      "Localized urinary tract infection (UTI)"
+    ],
+    [
+      "S42",
+      "symptom",
+      "Dysuria"
+    ],
+    [
+      "S43",
+      "symptom",
+      "Nocturia"
+    ],
+    [
+      "N76",
+      "note",
+      "Patient treated with dapagliflozin for 4 months presented with dysuria and nocturia."
+    ],
+    [
+      "D60",
+      "disease",
+      "Bladder outlet obstruction"
+    ],
+    [
+      "D61",
+      "disease",
+      "Incomplete ureteral duplication"
+    ],
+    [
+      "DR66",
+      "drug",
+      "Meropenem"
+    ],
+    [
+      "D62",
+      "disease",
+      "Chronic Coronary Syndrome (CCS): a dynamic clinical entity involving obstructive and non-obstructive coronary disease, microvascular dysfunction, and vasomotor abnormalities."
+    ],
+    [
+      "N77",
+      "note",
+      "CCS has evolved from a stenosis-centered concept to a state of coordinated neurohormonal and endocrine disturbance."
+    ],
+    [
+      "DR67",
+      "drug",
+      "RAAS blockade: a therapy targeting the renin-angiotensin-aldosterone system."
+    ],
+    [
+      "DR68",
+      "drug",
+      "Beta-blockers: medications that reduce heart rate and blood pressure."
+    ],
+    [
+      "DR69",
+      "drug",
+      "Mineralocorticoid receptor antagonists: drugs that block the effects of aldosterone."
+    ],
+    [
+      "DR70",
+      "drug",
+      "GLP-1 receptor agonists: a class of drugs that stimulate insulin secretion and inhibit glucagon release."
+    ],
+    [
+      "DR71",
+      "drug",
+      "SGLT2 inhibitors: a class of drugs that promote renal glucose excretion."
+    ],
+    [
+      "N78",
+      "note",
+      "Four phenotypes derived from T2DM cohort: favorable-profile, cardiorenal-fibrotic, inflammatory-metabolic, severe hyperglycemic-obesity."
+    ],
+    [
+      "S44",
+      "symptom",
+      "HbA1c"
+    ],
+    [
+      "S45",
+      "symptom",
+      "BMI"
+    ],
+    [
+      "S46",
+      "symptom",
+      "TyG"
+    ],
+    [
+      "S47",
+      "symptom",
+      "triglycerides"
+    ],
+    [
+      "S48",
+      "symptom",
+      "UACR"
+    ],
+    [
+      "S49",
+      "symptom",
+      "eGFR"
+    ],
+    [
+      "S50",
+      "symptom",
+      "FIB-4"
+    ],
+    [
+      "S51",
+      "symptom",
+      "CRP"
+    ],
+    [
+      "S52",
+      "symptom",
+      "Oxidative stress"
+    ],
+    [
+      "S53",
+      "symptom",
+      "HDL levels"
+    ],
+    [
+      "S54",
+      "symptom",
+      "Muscle grip strength"
+    ],
+    [
+      "N79",
+      "note",
+      "Mediterranean diet (VegMedD)"
+    ],
+    [
+      "N80",
+      "note",
+      "circuit resistance training"
+    ],
+    [
+      "S55",
+      "symptom",
+      "glycemic control (HbA1c)"
+    ],
+    [
+      "S56",
+      "symptom",
+      "frailty"
+    ],
+    [
+      "N81",
+      "note",
+      "cost-effectiveness analysis"
+    ],
+    [
+      "N82",
+      "note",
+      "quality-adjusted life years (QALYs)"
+    ],
+    [
+      "D63",
+      "disease",
+      "Gout: a form of inflammatory arthritis characterized by recurrent attacks of a red, tender, hot, and swollen joint."
+    ],
+    [
+      "S57",
+      "symptom",
+      "Serum uric acid (SUA) levels: a measure often elevated in gout."
+    ],
+    [
+      "D64",
+      "disease",
+      "Myocardial injury: a common clinical condition that deteriorates patient prognosis."
+    ],
+    [
+      "N83",
+      "note",
+      "Systematic review investigating the effects of SGLT2 inhibitors on myocardial injury."
+    ],
+    [
+      "S58",
+      "symptom",
+      "High-sensitivity cardiac troponin (hs-cTn): a cardiac injury biomarker."
+    ],
+    [
+      "D65",
+      "disease",
+      "Acute kidney injury"
+    ],
+    [
+      "D66",
+      "disease",
+      "Heart Failure with Preserved Ejection Fraction (HFpEF): heterogeneous syndrome associated with substantial morbidity, mortality, and impaired quality of life."
+    ],
+    [
+      "D67",
+      "disease",
+      "Obesity: a condition characterized by excessive body fat that increases the risk of various health issues."
+    ],
+    [
+      "D68",
+      "disease",
+      "Atrial fibrillation: a common heart rhythm disorder that can lead to stroke and other heart-related complications."
+    ],
+    [
+      "DR72",
+      "drug",
+      "Pentoxifylline (PTX): non-specific phosphodiesterase inhibitor that reduces proteinuria and may delay progression of diabetic kidney disease."
+    ]
+  ],
+  "edges": [
+    [
+      "D1",
+      "D3",
+      "comorbid_with"
+    ],
+    [
+      "D1",
+      "D2",
+      "comorbid_with"
+    ],
+    [
+      "D1",
+      "S1",
+      "associated_with"
+    ],
+    [
+      "D1",
+      "S4",
+      "associated_with"
+    ],
+    [
+      "D2",
+      "D4",
+      "comorbid_with"
+    ],
+    [
+      "D2",
+      "S3",
+      "associated_with"
+    ],
+    [
+      "D2",
+      "S4",
+      "associated_with"
+    ],
+    [
+      "D3",
+      "D4",
+      "comorbid_with"
+    ],
+    [
+      "D3",
+      "S2",
+      "associated_with"
+    ],
+    [
+      "D4",
+      "S4",
+      "associated_with"
+    ],
+    [
+      "DR1",
+      "D1",
+      "treats"
+    ],
+    [
+      "DR1",
+      "S1",
+      "treats"
+    ],
+    [
+      "DR1",
+      "G6",
+      "has pharmacogenetic association with"
+    ],
+    [
+      "DR1",
+      "G7",
+      "has pharmacogenetic association with"
+    ],
+    [
+      "DR1",
+      "G8",
+      "has pharmacogenetic association with"
+    ],
+    [
+      "DR1",
+      "G9",
+      "has pharmacogenetic association with"
+    ],
+    [
+      "DR1",
+      "G10",
+      "has pharmacogenetic association with"
+    ],
+    [
+      "DR1",
+      "G11",
+      "has pharmacogenetic association with"
+    ],
+    [
+      "DR1",
+      "DR2",
+      "shows potential synergistic effects with"
+    ],
+    [
+      "DR1",
+      "DR3",
+      "shows potential synergistic effects with"
+    ],
+    [
+      "DR1",
+      "DR4",
+      "combined with"
+    ],
+    [
+      "DR1",
+      "D4",
+      "used in management of"
+    ],
+    [
+      "DR2",
+      "D1",
+      "treats"
+    ],
+    [
+      "DR2",
+      "D2",
+      "treats"
+    ],
+    [
+      "DR2",
+      "DR3",
+      "combined_therapy"
+    ],
+    [
+      "DR3",
+      "D2",
+      "treats"
+    ],
+    [
+      "DR3",
+      "D3",
+      "treats"
+    ],
+    [
+      "DR3",
+      "S2",
+      "treats"
+    ],
+    [
+      "DR3",
+      "S3",
+      "treats"
+    ],
+    [
+      "DR3",
+      "DR5",
+      "combined_therapy"
+    ],
+    [
+      "DR3",
+      "DR4",
+      "includes"
+    ],
+    [
+      "DR4",
+      "D4",
+      "treats"
+    ],
+    [
+      "DR4",
+      "D2",
+      "treats"
+    ],
+    [
+      "DR4",
+      "D1",
+      "treats"
+    ],
+    [
+      "DR4",
+      "DR3",
+      "interacts_with"
+    ],
+    [
+      "DR5",
+      "D2",
+      "treats"
+    ],
+    [
+      "DR5",
+      "S3",
+      "treats"
+    ],
+    [
+      "G1",
+      "D1",
+      "risk_gene_for"
+    ],
+    [
+      "G2",
+      "D3",
+      "risk_gene_for"
+    ],
+    [
+      "G3",
+      "D2",
+      "risk_gene_for"
+    ],
+    [
+      "G4",
+      "DR4",
+      "targeted_by"
+    ],
+    [
+      "N1",
+      "D1",
+      "mentions"
+    ],
+    [
+      "N1",
+      "DR1",
+      "mentions"
+    ],
+    [
+      "N1",
+      "D26",
+      "describes"
+    ],
+    [
+      "N2",
+      "D2",
+      "mentions"
+    ],
+    [
+      "N2",
+      "DR3",
+      "mentions"
+    ],
+    [
+      "N2",
+      "DR5",
+      "mentions"
+    ],
+    [
+      "N3",
+      "D1",
+      "mentions"
+    ],
+    [
+      "N3",
+      "D4",
+      "mentions"
+    ],
+    [
+      "N3",
+      "DR2",
+      "mentions"
+    ],
+    [
+      "N4",
+      "D3",
+      "mentions"
+    ],
+    [
+      "N4",
+      "DR3",
+      "mentions"
+    ],
+    [
+      "DR6",
+      "D4",
+      "treats"
+    ],
+    [
+      "DR6",
+      "D1",
+      "treats"
+    ],
+    [
+      "DR6",
+      "D5",
+      "prevents"
+    ],
+    [
+      "DR6",
+      "N6",
+      "has_clinical_experience"
+    ],
+    [
+      "DR6",
+      "S6",
+      "has_lower_risk_of"
+    ],
+    [
+      "G5",
+      "DR6",
+      "targeted_by"
+    ],
+    [
+      "D5",
+      "D1",
+      "includes"
+    ],
+    [
+      "D6",
+      "D7",
+      "associated_with"
+    ],
+    [
+      "D6",
+      "DR7",
+      "treated_with"
+    ],
+    [
+      "D7",
+      "DR8",
+      "treated_with"
+    ],
+    [
+      "DR7",
+      "S7",
+      "associated_with"
+    ],
+    [
+      "DR8",
+      "S7",
+      "associated_with"
+    ],
+    [
+      "N7",
+      "D6",
+      "describes"
+    ],
+    [
+      "N7",
+      "D7",
+      "describes"
+    ],
+    [
+      "D8",
+      "D9",
+      "includes"
+    ],
+    [
+      "D8",
+      "D10",
+      "includes"
+    ],
+    [
+      "DR9",
+      "D8",
+      "treats"
+    ],
+    [
+      "DR9",
+      "D10",
+      "treats"
+    ],
+    [
+      "N8",
+      "DR9",
+      "extends_utility"
+    ],
+    [
+      "N9",
+      "DR9",
+      "guideline_incorporation"
+    ],
+    [
+      "D11",
+      "DR10",
+      "treated_by"
+    ],
+    [
+      "D11",
+      "D12",
+      "managed_by"
+    ],
+    [
+      "D11",
+      "S8",
+      "associated_with"
+    ],
+    [
+      "D11",
+      "S9",
+      "associated_with"
+    ],
+    [
+      "DR10",
+      "N10",
+      "discussed_in"
+    ],
+    [
+      "D12",
+      "N10",
+      "discussed_in"
+    ],
+    [
+      "D13",
+      "D14",
+      "includes"
+    ],
+    [
+      "D13",
+      "D15",
+      "includes"
+    ],
+    [
+      "DR11",
+      "D13",
+      "treats"
+    ],
+    [
+      "DR11",
+      "D14",
+      "treats"
+    ],
+    [
+      "DR11",
+      "D15",
+      "treats"
+    ],
+    [
+      "DR11",
+      "N11",
+      "has_evidence"
+    ],
+    [
+      "DR12",
+      "D16",
+      "shows potential for"
+    ],
+    [
+      "DR12",
+      "D34",
+      "used in management of"
+    ],
+    [
+      "N12",
+      "DR12",
+      "analyzes"
+    ],
+    [
+      "N12",
+      "D16",
+      "addresses"
+    ],
+    [
+      "N13",
+      "DR12",
+      "focuses on"
+    ],
+    [
+      "D17",
+      "D7",
+      "includes"
+    ],
+    [
+      "D17",
+      "D10",
+      "includes"
+    ],
+    [
+      "D17",
+      "DR12",
+      "used with"
+    ],
+    [
+      "D17",
+      "N41",
+      "is defined by"
+    ],
+    [
+      "D17",
+      "N42",
+      "includes"
+    ],
+    [
+      "D17",
+      "N43",
+      "is promoted by"
+    ],
+    [
+      "D17",
+      "N44",
+      "is limited by"
+    ],
+    [
+      "D17",
+      "DR23",
+      "requires management with"
+    ],
+    [
+      "D17",
+      "DR32",
+      "requires management with"
+    ],
+    [
+      "D17",
+      "DR33",
+      "requires management with"
+    ],
+    [
+      "D17",
+      "DR34",
+      "requires management with"
+    ],
+    [
+      "DR13",
+      "D17",
+      "treats"
+    ],
+    [
+      "DR13",
+      "D7",
+      "benefits"
+    ],
+    [
+      "DR13",
+      "D10",
+      "benefits"
+    ],
+    [
+      "DR13",
+      "S10",
+      "monitored by"
+    ],
+    [
+      "DR13",
+      "D34",
+      "is being tested for treatment of"
+    ],
+    [
+      "D18",
+      "D19",
+      "associated with"
+    ],
+    [
+      "D18",
+      "DR14",
+      "treated with"
+    ],
+    [
+      "D18",
+      "DR15",
+      "recommended for management"
+    ],
+    [
+      "D18",
+      "DR36",
+      "recommended for management"
+    ],
+    [
+      "D18",
+      "D33",
+      "associated with"
+    ],
+    [
+      "D18",
+      "D41",
+      "associated with"
+    ],
+    [
+      "D18",
+      "D23",
+      "associated with"
+    ],
+    [
+      "D18",
+      "D34",
+      "complicated by"
+    ],
+    [
+      "D18",
+      "D42",
+      "developed"
+    ],
+    [
+      "D18",
+      "S39",
+      "associated with"
+    ],
+    [
+      "D18",
+      "DR1",
+      "treated with"
+    ],
+    [
+      "D18",
+      "DR2",
+      "treated with"
+    ],
+    [
+      "D18",
+      "DR3",
+      "treated with"
+    ],
+    [
+      "D18",
+      "S54",
+      "associated with"
+    ],
+    [
+      "D18",
+      "S4",
+      "associated with"
+    ],
+    [
+      "D18",
+      "S3",
+      "associated with"
+    ],
+    [
+      "D18",
+      "S1",
+      "associated with"
+    ],
+    [
+      "D18",
+      "N79",
+      "treated with"
+    ],
+    [
+      "D18",
+      "N80",
+      "treated with"
+    ],
+    [
+      "D18",
+      "S55",
+      "measured by"
+    ],
+    [
+      "D18",
+      "S56",
+      "measured by"
+    ],
+    [
+      "D19",
+      "DR13",
+      "treated with"
+    ],
+    [
+      "D19",
+      "N17",
+      "studied in"
+    ],
+    [
+      "D19",
+      "D27",
+      "is related to"
+    ],
+    [
+      "D19",
+      "D21",
+      "contributes to"
+    ],
+    [
+      "DR14",
+      "S10",
+      "monitored by"
+    ],
+    [
+      "DR14",
+      "S17",
+      "affects"
+    ],
+    [
+      "DR14",
+      "D2",
+      "reduces risk of"
+    ],
+    [
+      "DR14",
+      "D55",
+      "associated with lower risk of"
+    ],
+    [
+      "DR14",
+      "D56",
+      "associated with lower risk of"
+    ],
+    [
+      "DR14",
+      "D57",
+      "associated with lower risk of"
+    ],
+    [
+      "N14",
+      "D18",
+      "involves"
+    ],
+    [
+      "N14",
+      "D19",
+      "involves"
+    ],
+    [
+      "D20",
+      "D10",
+      "increases risk for"
+    ],
+    [
+      "D20",
+      "DR19",
+      "treated with"
+    ],
+    [
+      "D20",
+      "DR1",
+      "is treated by"
+    ],
+    [
+      "D20",
+      "DR15",
+      "is treated by"
+    ],
+    [
+      "D20",
+      "DR14",
+      "managed by"
+    ],
+    [
+      "D20",
+      "S8",
+      "associated with"
+    ],
+    [
+      "D20",
+      "DR21",
+      "treated by"
+    ],
+    [
+      "D20",
+      "D33",
+      "associated with"
+    ],
+    [
+      "D20",
+      "D19",
+      "associated with"
+    ],
+    [
+      "D20",
+      "D35",
+      "is associated with"
+    ],
+    [
+      "D20",
+      "D37",
+      "associated with"
+    ],
+    [
+      "D20",
+      "S22",
+      "associated with"
+    ],
+    [
+      "D20",
+      "D40",
+      "associated with"
+    ],
+    [
+      "D20",
+      "S40",
+      "associated with"
+    ],
+    [
+      "D20",
+      "DR35",
+      "developed for"
+    ],
+    [
+      "D20",
+      "D55",
+      "increases risk of"
+    ],
+    [
+      "D20",
+      "D56",
+      "increases risk of"
+    ],
+    [
+      "D20",
+      "D57",
+      "increases risk of"
+    ],
+    [
+      "D20",
+      "D63",
+      "coexists with"
+    ],
+    [
+      "D20",
+      "D64",
+      "associated with"
+    ],
+    [
+      "D20",
+      "D34",
+      "is a risk factor for"
+    ],
+    [
+      "DR15",
+      "N17",
+      "compared in"
+    ],
+    [
+      "DR15",
+      "G4",
+      "has pharmacogenetic association with"
+    ],
+    [
+      "DR15",
+      "G12",
+      "has pharmacogenetic association with"
+    ],
+    [
+      "DR15",
+      "G13",
+      "has pharmacogenetic association with"
+    ],
+    [
+      "DR15",
+      "G14",
+      "has pharmacogenetic association with"
+    ],
+    [
+      "DR15",
+      "D20",
+      "treats"
+    ],
+    [
+      "DR15",
+      "S17",
+      "affects"
+    ],
+    [
+      "DR15",
+      "D37",
+      "associated with reduced risk of"
+    ],
+    [
+      "DR15",
+      "D19",
+      "provides organ protection in"
+    ],
+    [
+      "DR15",
+      "D33",
+      "considered in patients with"
+    ],
+    [
+      "DR15",
+      "D41",
+      "considered in patients with"
+    ],
+    [
+      "DR15",
+      "S22",
+      "showed no clear associations with"
+    ],
+    [
+      "DR15",
+      "D1",
+      "used for"
+    ],
+    [
+      "DR15",
+      "S11",
+      "improves"
+    ],
+    [
+      "DR15",
+      "S12",
+      "affects"
+    ],
+    [
+      "DR15",
+      "S3",
+      "associated with"
+    ],
+    [
+      "DR15",
+      "S30",
+      "risk of"
+    ],
+    [
+      "DR15",
+      "S6",
+      "risk of"
+    ],
+    [
+      "DR15",
+      "S4",
+      "may cause"
+    ],
+    [
+      "DR15",
+      "N68",
+      "described in"
+    ],
+    [
+      "DR15",
+      "S40",
+      "increases"
+    ],
+    [
+      "DR15",
+      "S7",
+      "improves"
+    ],
+    [
+      "DR15",
+      "S8",
+      "improves"
+    ],
+    [
+      "DR15",
+      "D64",
+      "investigates effects on"
+    ],
+    [
+      "DR15",
+      "D60",
+      "associated with lower"
+    ],
+    [
+      "DR15",
+      "D62",
+      "associated with lower"
+    ],
+    [
+      "DR15",
+      "D42",
+      "associated with no significant difference in"
+    ],
+    [
+      "DR15",
+      "D63",
+      "associated with no significant difference in"
+    ],
+    [
+      "DR15",
+      "D65",
+      "associated with no significant difference in"
+    ],
+    [
+      "DR15",
+      "S20",
+      "associated with lower"
+    ],
+    [
+      "N15",
+      "D20",
+      "applies to"
+    ],
+    [
+      "N15",
+      "D10",
+      "aims to prevent"
+    ],
+    [
+      "N15",
+      "DR15",
+      "includes prescription of"
+    ],
+    [
+      "N15",
+      "DR13",
+      "includes prescription of"
+    ],
+    [
+      "N16",
+      "D10",
+      "used for risk assessment of"
+    ],
+    [
+      "DR16",
+      "D21",
+      "is indicated for"
+    ],
+    [
+      "DR16",
+      "D22",
+      "is indicated for"
+    ],
+    [
+      "DR16",
+      "D23",
+      "is indicated for"
+    ],
+    [
+      "DR16",
+      "DR17",
+      "can be combined with"
+    ],
+    [
+      "D23",
+      "D21",
+      "contributes to"
+    ],
+    [
+      "DR18",
+      "D24",
+      "attenuates"
+    ],
+    [
+      "DR18",
+      "S11",
+      "improves"
+    ],
+    [
+      "DR18",
+      "S12",
+      "reduces increase in"
+    ],
+    [
+      "DR18",
+      "S13",
+      "reduces"
+    ],
+    [
+      "DR18",
+      "S17",
+      "affects"
+    ],
+    [
+      "DR18",
+      "N53",
+      "evaluated in"
+    ],
+    [
+      "DR18",
+      "D59",
+      "caused"
+    ],
+    [
+      "DR18",
+      "N76",
+      "prescribed to"
+    ],
+    [
+      "DR18",
+      "S44",
+      "associated with reduction in"
+    ],
+    [
+      "D25",
+      "D19",
+      "comorbid with"
+    ],
+    [
+      "D25",
+      "N17",
+      "studied in"
+    ],
+    [
+      "DR19",
+      "N17",
+      "compared in"
+    ],
+    [
+      "D26",
+      "DR14",
+      "evaluated in"
+    ],
+    [
+      "DR20",
+      "D20",
+      "used in treatment of"
+    ],
+    [
+      "DR20",
+      "S14",
+      "associated with"
+    ],
+    [
+      "DR20",
+      "S15",
+      "associated with increased risk of"
+    ],
+    [
+      "DR20",
+      "S16",
+      "impact on"
+    ],
+    [
+      "N18",
+      "D20",
+      "population studied"
+    ],
+    [
+      "DR21",
+      "D19",
+      "prescribed for"
+    ],
+    [
+      "DR21",
+      "D2",
+      "potential benefit in"
+    ],
+    [
+      "DR21",
+      "D4",
+      "potential benefit in"
+    ],
+    [
+      "DR21",
+      "D1",
+      "potential benefit in"
+    ],
+    [
+      "DR21",
+      "S18",
+      "reduces"
+    ],
+    [
+      "DR21",
+      "S19",
+      "reduces"
+    ],
+    [
+      "DR21",
+      "S20",
+      "reduces"
+    ],
+    [
+      "DR21",
+      "S21",
+      "reduces"
+    ],
+    [
+      "DR21",
+      "S22",
+      "no significant effect on"
+    ],
+    [
+      "DR21",
+      "S23",
+      "reduces"
+    ],
+    [
+      "DR21",
+      "N54",
+      "discusses"
+    ],
+    [
+      "DR21",
+      "N55",
+      "influences"
+    ],
+    [
+      "DR21",
+      "N56",
+      "improves"
+    ],
+    [
+      "DR21",
+      "N57",
+      "mediates"
+    ],
+    [
+      "DR21",
+      "D20",
+      "used in"
+    ],
+    [
+      "DR21",
+      "D44",
+      "associated with lower odds of"
+    ],
+    [
+      "DR21",
+      "S34",
+      "risk of"
+    ],
+    [
+      "DR21",
+      "S35",
+      "risk of"
+    ],
+    [
+      "DR21",
+      "D5",
+      "reduces risk of progression to"
+    ],
+    [
+      "DR21",
+      "D6",
+      "provides kidney protection in patients with"
+    ],
+    [
+      "DR21",
+      "DR52",
+      "can be combined with"
+    ],
+    [
+      "DR21",
+      "DR6",
+      "can be combined with"
+    ],
+    [
+      "DR21",
+      "D63",
+      "treats"
+    ],
+    [
+      "DR21",
+      "S57",
+      "lowers"
+    ],
+    [
+      "DR21",
+      "S6",
+      "reduces"
+    ],
+    [
+      "DR21",
+      "S7",
+      "reduces"
+    ],
+    [
+      "DR21",
+      "S8",
+      "reduces"
+    ],
+    [
+      "DR21",
+      "S9",
+      "reduces"
+    ],
+    [
+      "DR21",
+      "S10",
+      "reduces"
+    ],
+    [
+      "N19",
+      "DR21",
+      "evaluated in"
+    ],
+    [
+      "N19",
+      "D19",
+      "evaluated in"
+    ],
+    [
+      "N20",
+      "N19",
+      "describes"
+    ],
+    [
+      "N21",
+      "N19",
+      "reports"
+    ],
+    [
+      "N22",
+      "N19",
+      "reports"
+    ],
+    [
+      "D27",
+      "DR22",
+      "includes"
+    ],
+    [
+      "D27",
+      "N23",
+      "has"
+    ],
+    [
+      "DR22",
+      "DR23",
+      "is a component of"
+    ],
+    [
+      "DR22",
+      "DR15",
+      "is a component of"
+    ],
+    [
+      "DR22",
+      "DR13",
+      "is a component of"
+    ],
+    [
+      "DR22",
+      "DR24",
+      "is a component of"
+    ],
+    [
+      "D28",
+      "D20",
+      "comorbid with"
+    ],
+    [
+      "D28",
+      "DR19",
+      "initiated treatment with"
+    ],
+    [
+      "D28",
+      "DR22",
+      "compared with"
+    ],
+    [
+      "D28",
+      "DR21",
+      "compared with"
+    ],
+    [
+      "N24",
+      "DR15",
+      "describes"
+    ],
+    [
+      "D29",
+      "D30",
+      "hemoglobinopathies can lead to secondary diabetes mellitus"
+    ],
+    [
+      "D29",
+      "D6",
+      "hemoglobinopathies are associated with diabetes mellitus"
+    ],
+    [
+      "DR25",
+      "D30",
+      "SGLT-2 inhibitors are adjuncts for diabetes management"
+    ],
+    [
+      "DR26",
+      "D30",
+      "GLP-1 receptor agonists are adjuncts for diabetes management"
+    ],
+    [
+      "N25",
+      "D30",
+      "pathogenesis of secondary diabetes mellitus involves β-cell apoptosis and insulin resistance"
+    ],
+    [
+      "N26",
+      "D30",
+      "HbA1c inaccuracies affect diabetes diagnosis in hemoglobinopathies"
+    ],
+    [
+      "N27",
+      "D30",
+      "CGM metrics are used for monitoring diabetes in hemoglobinopathies"
+    ],
+    [
+      "N28",
+      "D30",
+      "basal-bolus insulin is a treatment for diabetes"
+    ],
+    [
+      "N29",
+      "D30",
+      "iron chelation therapy can reverse dysglycemia in diabetes"
+    ],
+    [
+      "N30",
+      "D30",
+      "specialized care centers improve diabetes outcomes"
+    ],
+    [
+      "D31",
+      "DR14",
+      "associated with"
+    ],
+    [
+      "D31",
+      "D2",
+      "associated with worse outcomes after"
+    ],
+    [
+      "N31",
+      "N32",
+      "describes"
+    ],
+    [
+      "N32",
+      "D32",
+      "implicated in"
+    ],
+    [
+      "D32",
+      "DR27",
+      "targeted by"
+    ],
+    [
+      "DR27",
+      "DR28",
+      "compared with"
+    ],
+    [
+      "DR27",
+      "DR29",
+      "combined with"
+    ],
+    [
+      "N33",
+      "DR21",
+      "statement"
+    ],
+    [
+      "N34",
+      "DR21",
+      "statement"
+    ],
+    [
+      "DR30",
+      "D20",
+      "evaluated for efficacy and safety in"
+    ],
+    [
+      "D34",
+      "DR31",
+      "treated with"
+    ],
+    [
+      "D34",
+      "DR18",
+      "treated with"
+    ],
+    [
+      "D34",
+      "N35",
+      "studied in"
+    ],
+    [
+      "D34",
+      "S24",
+      "associated with"
+    ],
+    [
+      "D34",
+      "S25",
+      "associated with"
+    ],
+    [
+      "D34",
+      "S26",
+      "associated with"
+    ],
+    [
+      "D34",
+      "S27",
+      "associated with"
+    ],
+    [
+      "D34",
+      "D21",
+      "involves"
+    ],
+    [
+      "D34",
+      "D33",
+      "involves"
+    ],
+    [
+      "D34",
+      "DR35",
+      "is treated by"
+    ],
+    [
+      "D34",
+      "DR16",
+      "is treated by"
+    ],
+    [
+      "D34",
+      "D5",
+      "can progress to"
+    ],
+    [
+      "D34",
+      "D4",
+      "is characterized by"
+    ],
+    [
+      "DR31",
+      "S49",
+      "associated with improvement in"
+    ],
+    [
+      "DR31",
+      "D41",
+      "associated with reduction in risk of"
+    ],
+    [
+      "DR31",
+      "S21",
+      "associated with trend toward reduction in risk of"
+    ],
+    [
+      "DR31",
+      "S22",
+      "no significant difference observed in risk of"
+    ],
+    [
+      "DR31",
+      "S53",
+      "associated with higher levels of"
+    ],
+    [
+      "N35",
+      "N36",
+      "resulted in"
+    ],
+    [
+      "N35",
+      "N37",
+      "resulted in"
+    ],
+    [
+      "D35",
+      "D34",
+      "is associated with"
+    ],
+    [
+      "D35",
+      "DR1",
+      "treated by"
+    ],
+    [
+      "D35",
+      "DR2",
+      "treated by"
+    ],
+    [
+      "D35",
+      "DR3",
+      "treated by"
+    ],
+    [
+      "S28",
+      "D20",
+      "affects"
+    ],
+    [
+      "S28",
+      "N39",
+      "is linked to"
+    ],
+    [
+      "DR32",
+      "S28",
+      "raises"
+    ],
+    [
+      "DR32",
+      "D20",
+      "used in treatment of"
+    ],
+    [
+      "DR32",
+      "D19",
+      "reduces risk of"
+    ],
+    [
+      "DR32",
+      "D8",
+      "addresses aspects of"
+    ],
+    [
+      "DR32",
+      "D34",
+      "used in treatment of"
+    ],
+    [
+      "DR32",
+      "D1",
+      "used for"
+    ],
+    [
+      "DR32",
+      "D2",
+      "improves outcomes in"
+    ],
+    [
+      "DR32",
+      "D3",
+      "improves outcomes in"
+    ],
+    [
+      "DR32",
+      "S1",
+      "affects"
+    ],
+    [
+      "DR32",
+      "S2",
+      "reduces"
+    ],
+    [
+      "DR32",
+      "S3",
+      "improves"
+    ],
+    [
+      "DR32",
+      "S4",
+      "influences"
+    ],
+    [
+      "DR32",
+      "D35",
+      "improves"
+    ],
+    [
+      "DR32",
+      "D52",
+      "improves"
+    ],
+    [
+      "DR32",
+      "S52",
+      "reduces"
+    ],
+    [
+      "DR32",
+      "S6",
+      "reduces"
+    ],
+    [
+      "N38",
+      "N39",
+      "indicates"
+    ],
+    [
+      "N40",
+      "S28",
+      "is a treatment for"
+    ],
+    [
+      "D36",
+      "DR18",
+      "evaluated in"
+    ],
+    [
+      "D36",
+      "S15",
+      "associated with"
+    ],
+    [
+      "D36",
+      "S12",
+      "monitored by"
+    ],
+    [
+      "D36",
+      "S18",
+      "related to"
+    ],
+    [
+      "D36",
+      "S19",
+      "risk factor for"
+    ],
+    [
+      "D36",
+      "S20",
+      "risk factor for"
+    ],
+    [
+      "D36",
+      "S21",
+      "risk factor for"
+    ],
+    [
+      "D36",
+      "S22",
+      "risk factor for"
+    ],
+    [
+      "D36",
+      "S23",
+      "associated with"
+    ],
+    [
+      "D37",
+      "DR15",
+      "initiated treatment with"
+    ],
+    [
+      "D37",
+      "DR12",
+      "initiated treatment with"
+    ],
+    [
+      "D38",
+      "D17",
+      "is part of"
+    ],
+    [
+      "D39",
+      "DR15",
+      "associated with"
+    ],
+    [
+      "N45",
+      "D20",
+      "observed in"
+    ],
+    [
+      "N46",
+      "N47",
+      "clarifies"
+    ],
+    [
+      "N48",
+      "N49",
+      "highlights limitation of"
+    ],
+    [
+      "N50",
+      "DR15",
+      "concludes against routine screening in"
+    ],
+    [
+      "D40",
+      "DR35",
+      "treated by"
+    ],
+    [
+      "D40",
+      "D43",
+      "associated with"
+    ],
+    [
+      "D40",
+      "DR38",
+      "may lower BP and reduce organ damage"
+    ],
+    [
+      "D40",
+      "DR39",
+      "includes"
+    ],
+    [
+      "D40",
+      "DR40",
+      "includes"
+    ],
+    [
+      "D40",
+      "DR34",
+      "includes"
+    ],
+    [
+      "D40",
+      "DR41",
+      "includes"
+    ],
+    [
+      "D40",
+      "DR18",
+      "treated by"
+    ],
+    [
+      "D40",
+      "DR21",
+      "recommended for"
+    ],
+    [
+      "D40",
+      "N64",
+      "assessed in"
+    ],
+    [
+      "D40",
+      "DR60",
+      "administered to"
+    ],
+    [
+      "D40",
+      "DR61",
+      "administered to"
+    ],
+    [
+      "D40",
+      "DR54",
+      "administered to"
+    ],
+    [
+      "D40",
+      "DR62",
+      "administered to"
+    ],
+    [
+      "D40",
+      "S38",
+      "impact on"
+    ],
+    [
+      "DR35",
+      "S31",
+      "improves"
+    ],
+    [
+      "DR35",
+      "S32",
+      "reduces"
+    ],
+    [
+      "DR35",
+      "S33",
+      "lowers"
+    ],
+    [
+      "DR35",
+      "S29",
+      "increases risk of"
+    ],
+    [
+      "DR35",
+      "S30",
+      "does not significantly increase risk of"
+    ],
+    [
+      "DR35",
+      "N53",
+      "evaluated in"
+    ],
+    [
+      "DR35",
+      "D55",
+      "associated with lower risk of"
+    ],
+    [
+      "DR35",
+      "D56",
+      "associated with lower risk of"
+    ],
+    [
+      "DR35",
+      "D57",
+      "associated with lower risk of"
+    ],
+    [
+      "N51",
+      "D40",
+      "evaluates"
+    ],
+    [
+      "DR36",
+      "D19",
+      "provides organ protection in"
+    ],
+    [
+      "DR36",
+      "D33",
+      "considered in patients with"
+    ],
+    [
+      "DR36",
+      "D41",
+      "considered in patients with"
+    ],
+    [
+      "DR36",
+      "S22",
+      "associated with reduced risk of"
+    ],
+    [
+      "D41",
+      "D40",
+      "associated with"
+    ],
+    [
+      "DR37",
+      "D42",
+      "evaluated in"
+    ],
+    [
+      "DR37",
+      "S11",
+      "improves"
+    ],
+    [
+      "D42",
+      "N52",
+      "described in"
+    ],
+    [
+      "D42",
+      "DR19",
+      "associated with"
+    ],
+    [
+      "D42",
+      "DR20",
+      "associated with"
+    ],
+    [
+      "D42",
+      "S16",
+      "risk of"
+    ],
+    [
+      "D42",
+      "S23",
+      "risk of"
+    ],
+    [
+      "D42",
+      "S18",
+      "risk of"
+    ],
+    [
+      "D42",
+      "S19",
+      "risk of"
+    ],
+    [
+      "D42",
+      "S20",
+      "risk of"
+    ],
+    [
+      "D42",
+      "S21",
+      "risk of"
+    ],
+    [
+      "D42",
+      "S22",
+      "risk of"
+    ],
+    [
+      "D42",
+      "S29",
+      "risk of"
+    ],
+    [
+      "D42",
+      "S30",
+      "risk of"
+    ],
+    [
+      "D43",
+      "D40",
+      "occurs more frequently in"
+    ],
+    [
+      "DR40",
+      "S22",
+      "showed no clear associations with"
+    ],
+    [
+      "DR41",
+      "S22",
+      "associated with reduced risk of"
+    ],
+    [
+      "DR42",
+      "N54",
+      "discusses"
+    ],
+    [
+      "DR42",
+      "N55",
+      "influences"
+    ],
+    [
+      "DR42",
+      "N56",
+      "improves"
+    ],
+    [
+      "DR42",
+      "N57",
+      "mediates"
+    ],
+    [
+      "DR42",
+      "D55",
+      "associated with higher risk of"
+    ],
+    [
+      "DR42",
+      "D56",
+      "associated with higher risk of"
+    ],
+    [
+      "DR42",
+      "D57",
+      "associated with higher risk of"
+    ],
+    [
+      "N58",
+      "N59",
+      "suggests"
+    ],
+    [
+      "DR43",
+      "D20",
+      "treats"
+    ],
+    [
+      "DR43",
+      "S8",
+      "improves"
+    ],
+    [
+      "DR43",
+      "S31",
+      "improves"
+    ],
+    [
+      "DR43",
+      "S32",
+      "causes"
+    ],
+    [
+      "DR43",
+      "S33",
+      "causes"
+    ],
+    [
+      "DR43",
+      "S30",
+      "associated with"
+    ],
+    [
+      "DR43",
+      "S29",
+      "associated with"
+    ],
+    [
+      "DR44",
+      "DR45",
+      "compared with"
+    ],
+    [
+      "DR44",
+      "D1",
+      "used by"
+    ],
+    [
+      "DR44",
+      "D2",
+      "associated with lower risk of"
+    ],
+    [
+      "DR44",
+      "D3",
+      "associated with lower risk of"
+    ],
+    [
+      "DR44",
+      "D4",
+      "associated with lower risk of"
+    ],
+    [
+      "DR45",
+      "D1",
+      "used by"
+    ],
+    [
+      "DR45",
+      "D2",
+      "associated with"
+    ],
+    [
+      "DR45",
+      "D3",
+      "associated with"
+    ],
+    [
+      "DR45",
+      "D4",
+      "associated with"
+    ],
+    [
+      "D45",
+      "G1",
+      "associated with"
+    ],
+    [
+      "D45",
+      "DR1",
+      "treated with"
+    ],
+    [
+      "D45",
+      "DR2",
+      "improved by"
+    ],
+    [
+      "D45",
+      "N1",
+      "described in"
+    ],
+    [
+      "D45",
+      "N2",
+      "improved by"
+    ],
+    [
+      "D45",
+      "N3",
+      "targeted by"
+    ],
+    [
+      "D46",
+      "D40",
+      "associated with"
+    ],
+    [
+      "D46",
+      "DR21",
+      "treated with"
+    ],
+    [
+      "D46",
+      "N78",
+      "describes"
+    ],
+    [
+      "D46",
+      "DR52",
+      "treated with"
+    ],
+    [
+      "D46",
+      "DR32",
+      "treated with"
+    ],
+    [
+      "D46",
+      "DR18",
+      "treated with"
+    ],
+    [
+      "D46",
+      "DR31",
+      "treated with"
+    ],
+    [
+      "DR46",
+      "S34",
+      "risk of"
+    ],
+    [
+      "DR46",
+      "S35",
+      "risk of"
+    ],
+    [
+      "D47",
+      "S36",
+      "characterized by"
+    ],
+    [
+      "D47",
+      "S37",
+      "characterized by"
+    ],
+    [
+      "D47",
+      "N60",
+      "pathogenesis involves"
+    ],
+    [
+      "D47",
+      "DR47",
+      "emerging therapeutic target"
+    ],
+    [
+      "D47",
+      "DR48",
+      "emerging therapeutic target"
+    ],
+    [
+      "D47",
+      "DR49",
+      "emerging therapeutic target"
+    ],
+    [
+      "D47",
+      "DR50",
+      "emerging therapeutic target"
+    ],
+    [
+      "D48",
+      "DR1",
+      "may be treated with"
+    ],
+    [
+      "D48",
+      "DR2",
+      "may be treated with"
+    ],
+    [
+      "D48",
+      "DR3",
+      "may be treated with"
+    ],
+    [
+      "DR51",
+      "D20",
+      "used in treatment of"
+    ],
+    [
+      "DR51",
+      "D8",
+      "addresses aspects of"
+    ],
+    [
+      "DR51",
+      "D35",
+      "used in treatment of"
+    ],
+    [
+      "DR53",
+      "D40",
+      "Renin-angiotensin-aldosterone system inhibitors are foundational for nephroprotection in CKD."
+    ],
+    [
+      "DR54",
+      "D43",
+      "Calcium channel blockers are added to improve BP control."
+    ],
+    [
+      "DR55",
+      "D43",
+      "Thiazide diuretics are commonly added to improve BP control."
+    ],
+    [
+      "DR56",
+      "D43",
+      "Mineralocorticoid receptor antagonists (MRAs) are commonly added to improve BP control."
+    ],
+    [
+      "DR57",
+      "D40",
+      "Nonsteroidal MRAs are emerging pharmacologic strategies for CKD."
+    ],
+    [
+      "DR58",
+      "D40",
+      "Aldosterone synthase inhibitors are emerging pharmacologic strategies for CKD."
+    ],
+    [
+      "DR59",
+      "D40",
+      "RNA-based therapies are emerging pharmacologic strategies for CKD."
+    ],
+    [
+      "N61",
+      "D40",
+      "Emerging pharmacologic strategies aim to optimize cardiorenal outcomes in CKD."
+    ],
+    [
+      "N62",
+      "D40",
+      "Interventional strategies are being evaluated for BP control in CKD."
+    ],
+    [
+      "N63",
+      "D40",
+      "Therapies targeting inflammatory pathways may address challenges in CKD management."
+    ],
+    [
+      "DR60",
+      "D19",
+      "approved for treatment of"
+    ],
+    [
+      "DR60",
+      "D20",
+      "improves"
+    ],
+    [
+      "DR60",
+      "D41",
+      "reduces risk of"
+    ],
+    [
+      "DR60",
+      "S31",
+      "improves"
+    ],
+    [
+      "DR60",
+      "S27",
+      "can lead to"
+    ],
+    [
+      "S39",
+      "DR1",
+      "reduces risk of renal deterioration"
+    ],
+    [
+      "S39",
+      "DR2",
+      "reduces risk of renal deterioration"
+    ],
+    [
+      "S39",
+      "DR3",
+      "compared with"
+    ],
+    [
+      "N65",
+      "N66",
+      "describes"
+    ],
+    [
+      "N66",
+      "N67",
+      "includes factors associated with"
+    ],
+    [
+      "N67",
+      "DR60",
+      "involves"
+    ],
+    [
+      "D49",
+      "D4",
+      "is a complication of"
+    ],
+    [
+      "D49",
+      "DR1",
+      "is treated with"
+    ],
+    [
+      "D49",
+      "DR64",
+      "is treated with"
+    ],
+    [
+      "D49",
+      "DR63",
+      "can be managed with"
+    ],
+    [
+      "D50",
+      "D20",
+      "coexists with"
+    ],
+    [
+      "D50",
+      "D19",
+      "coexists with"
+    ],
+    [
+      "D50",
+      "DR15",
+      "may influence"
+    ],
+    [
+      "DR65",
+      "D51",
+      "associated with"
+    ],
+    [
+      "D51",
+      "N69",
+      "identified risk factors include"
+    ],
+    [
+      "D51",
+      "N70",
+      "predicted by"
+    ],
+    [
+      "D52",
+      "DR35",
+      "treated by"
+    ],
+    [
+      "N71",
+      "D52",
+      "evaluates"
+    ],
+    [
+      "N72",
+      "DR35",
+      "demonstrates effects"
+    ],
+    [
+      "N73",
+      "D52",
+      "reduces"
+    ],
+    [
+      "N74",
+      "DR35",
+      "shows safety profile"
+    ],
+    [
+      "D53",
+      "D54",
+      "is associated with"
+    ],
+    [
+      "D54",
+      "S41",
+      "is characterized by"
+    ],
+    [
+      "D54",
+      "DR1",
+      "is treated with"
+    ],
+    [
+      "D54",
+      "DR2",
+      "is treated with"
+    ],
+    [
+      "D58",
+      "DR1",
+      "medication prescribed"
+    ],
+    [
+      "D58",
+      "DR15",
+      "medication prescribed"
+    ],
+    [
+      "D58",
+      "DR19",
+      "medication prescribed"
+    ],
+    [
+      "N75",
+      "D58",
+      "study focus"
+    ],
+    [
+      "D59",
+      "S42",
+      "associated with"
+    ],
+    [
+      "D59",
+      "S43",
+      "associated with"
+    ],
+    [
+      "D59",
+      "DR66",
+      "treated with"
+    ],
+    [
+      "D60",
+      "D59",
+      "contributed to"
+    ],
+    [
+      "D61",
+      "D59",
+      "contributed to"
+    ],
+    [
+      "D62",
+      "N77",
+      "is conceptualized as"
+    ],
+    [
+      "D62",
+      "DR67",
+      "can be treated with"
+    ],
+    [
+      "D62",
+      "DR68",
+      "can be treated with"
+    ],
+    [
+      "D62",
+      "DR69",
+      "can be treated with"
+    ],
+    [
+      "D62",
+      "DR70",
+      "can be treated with"
+    ],
+    [
+      "D62",
+      "DR71",
+      "can be treated with"
+    ],
+    [
+      "DR70",
+      "D34",
+      "used in management of"
+    ],
+    [
+      "N78",
+      "S44",
+      "includes measure of"
+    ],
+    [
+      "N78",
+      "S45",
+      "includes measure of"
+    ],
+    [
+      "N78",
+      "S46",
+      "includes measure of"
+    ],
+    [
+      "N78",
+      "S47",
+      "includes measure of"
+    ],
+    [
+      "N78",
+      "S48",
+      "includes measure of"
+    ],
+    [
+      "N78",
+      "S49",
+      "includes measure of"
+    ],
+    [
+      "N78",
+      "S50",
+      "includes measure of"
+    ],
+    [
+      "N78",
+      "S51",
+      "includes measure of"
+    ],
+    [
+      "N81",
+      "D18",
+      "evaluated in"
+    ],
+    [
+      "N82",
+      "D18",
+      "derived from"
+    ],
+    [
+      "D64",
+      "S58",
+      "measured by"
+    ],
+    [
+      "N83",
+      "DR15",
+      "evaluates"
+    ],
+    [
+      "D66",
+      "D3",
+      "associated with"
+    ],
+    [
+      "D66",
+      "D6",
+      "associated with"
+    ],
+    [
+      "D66",
+      "D67",
+      "associated with"
+    ],
+    [
+      "D66",
+      "D68",
+      "associated with"
+    ],
+    [
+      "D66",
+      "DR15",
+      "therapeutically treated by"
+    ],
+    [
+      "DR72",
+      "D34",
+      "may delay progression of"
+    ],
+    [
+      "DR72",
+      "D5",
+      "may reduce risk of"
+    ]
+  ],
+  "saved_at": "2026-10-24T02:53:17.098771+00:00"
+}

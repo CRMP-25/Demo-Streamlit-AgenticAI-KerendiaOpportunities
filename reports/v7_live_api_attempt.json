@@ -1,0 +1,16 @@
+{
+  "pubmed": {
+    "status": "UNAVAILABLE",
+    "source": "pubmed",
+    "records": [],
+    "error": "<urlopen error [Errno -3] Temporary failure in name resolution>",
+    "retrieved_utc": "2026-10-25T10:41:11.542824+00:00"
+  },
+  "trials": {
+    "status": "UNAVAILABLE",
+    "source": "trials",
+    "records": [],
+    "error": "<urlopen error [Errno -3] Temporary failure in name resolution>",
+    "retrieved_utc": "2026-10-25T10:41:16.548434+00:00"
+  }
+}

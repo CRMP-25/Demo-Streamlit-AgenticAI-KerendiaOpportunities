@@ -1,0 +1,13 @@
+{
+  "status": "PASS_OFFLINE_INTEGRATION",
+  "tests_run": 10,
+  "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+  "scope": "packaging/integrity/guarded-query tests; not a fresh NHANES/R survey reproduction",
+  "historical_notebooks": 11,
+  "production_github_accessed": false,
+  "remaining_gates": [
+    "clinical concept review",
+    "creatinine cross-cycle comparability",
+    "external epidemiological validation"
+  ]
+}

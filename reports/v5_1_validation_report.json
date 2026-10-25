@@ -1,0 +1,39 @@
+{
+  "version": "V5.1",
+  "generated_utc": "2026-10-25T03:33:28.889770+00:00",
+  "input_archive_sha256": "913bfbebad741979ae436bd7ce2310709cab9b987c0d72ae9a77396fa02250e6",
+  "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+  "baseline_nodes": 293,
+  "baseline_edges": 517,
+  "observations": 4,
+  "candidate_links": 88,
+  "curated_conceptual_links": 16,
+  "rejected_links": 72,
+  "human_review_completed": false,
+  "tests": {
+    "baseline_unmodified_in_memory": true,
+    "all_input_observations_retained": true,
+    "all_candidate_links_adjudicated": true,
+    "no_curated_link_implies_diagnosis": true,
+    "no_curated_link_has_human_approval": true,
+    "eligibility_guard": true,
+    "trend_guard": true,
+    "population_answer_has_provenance": true,
+    "unrelated_question_not_fabricated": true,
+    "primary_and_bridge_are_separate": true,
+    "all_provenance_checks_pass": true,
+    "baseline_source_still_identical": true
+  },
+  "test_pass_count": 12,
+  "source_epidemiological_status": "REVIEW_REQUIRED",
+  "remaining_blockers": [
+    "Human review of curated clinical mappings",
+    "Serum creatinine cross-cycle comparability",
+    "External epidemiological validation",
+    "Missing-data model assumptions",
+    "Clinical eligibility cannot be derived from these observations"
+  ],
+  "github_accessed": false,
+  "baseline_modified": false,
+  "status": "INTEGRATION_TESTS_PASS_CLINICAL_REVIEW_REQUIRED"
+}

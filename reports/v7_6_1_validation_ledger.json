@@ -1,0 +1,15 @@
+{
+  "version": "V7.6.1",
+  "date": "2026-10-25",
+  "local_tests": {
+    "passed": 47,
+    "failed": 0
+  },
+  "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+  "v76_user_observed_live_pubmed_and_trials": "PASS_FROM_SCREENSHOT",
+  "v761_integrated_live_api": "NOT_EXECUTED_IN_DEVELOPMENT_ENV",
+  "v761_streamlit_ui": "NOT_EXECUTED_IN_DEVELOPMENT_ENV",
+  "kg_labels_dark": "IMPLEMENTED_NOT_VISUALLY_VERIFIED",
+  "scientific_approval": false,
+  "production_github_touched": false
+}

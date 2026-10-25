@@ -1,0 +1,33 @@
+test_baseline (test_regression.Regression.test_baseline) ... ok
+test_eligibility (test_regression.Regression.test_eligibility) ... ok
+test_links (test_regression.Regression.test_links) ... ok
+test_market (test_regression.Regression.test_market) ... ok
+test_no_approved_links (test_regression.Regression.test_no_approved_links) ... ok
+test_observations (test_regression.Regression.test_observations) ... ok
+test_other_period (test_regression.Regression.test_other_period) ... ok
+test_population (test_regression.Regression.test_population) ... ok
+test_trend (test_regression.Regression.test_trend) ... ok
+test_unknown (test_regression.Regression.test_unknown) ... ok
+test_all_local_gates (test_v7.TestV7.test_all_local_gates) ... ok
+test_concept_retrieval_not_validated (test_v7.TestV7.test_concept_retrieval_not_validated) ... ok
+test_disallow_untrusted_hosts (test_v7.TestV7.test_disallow_untrusted_hosts) ... ok
+test_eligibility_block (test_v7.TestV7.test_eligibility_block) ... ok
+test_external_off_by_default (test_v7.TestV7.test_external_off_by_default) ... ok
+test_invalid_scenario (test_v7.TestV7.test_invalid_scenario) ... ok
+test_market_block (test_v7.TestV7.test_market_block) ... ok
+test_missing_period (test_v7.TestV7.test_missing_period) ... ok
+test_nhanes_provenance (test_v7.TestV7.test_nhanes_provenance) ... ok
+test_no_evidence (test_v7.TestV7.test_no_evidence) ... ok
+test_plan_is_bounded (test_v7.TestV7.test_plan_is_bounded) ... ok
+test_reject_long_input (test_v7.TestV7.test_reject_long_input) ... ok
+test_scenario_not_eligibility (test_v7.TestV7.test_scenario_not_eligibility) ... ok
+test_scenario_requires_assumption (test_v7.TestV7.test_scenario_requires_assumption) ... ok
+test_screening_not_diagnosis (test_v7.TestV7.test_screening_not_diagnosis) ... ok
+test_trend_block (test_v7.TestV7.test_trend_block) ... ok
+test_weight_2015 (test_v7.TestV7.test_weight_2015) ... ok
+test_weight_2021 (test_v7.TestV7.test_weight_2021) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.035s
+
+OK

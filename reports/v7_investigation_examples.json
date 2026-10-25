@@ -1,0 +1,225 @@
+[
+  {
+    "question": "How many adults have CKD and diabetes?",
+    "timestamp_utc": "2026-10-25T10:41:16.556587+00:00",
+    "plan": [
+      "baseline_integrity",
+      "population_observation",
+      "clinical_kg_lexical_retrieval"
+    ],
+    "tools": {
+      "baseline_integrity": {
+        "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+        "nodes": 293,
+        "edges": 517,
+        "observations": 4,
+        "links": 88
+      },
+      "population_observation": {
+        "status": "REVIEW_REQUIRED",
+        "evidence_id": "NHANES_2021_2023_PRIMARY",
+        "period": "2021-2023",
+        "scenario": "primary",
+        "estimate": 9233797.803282894,
+        "ci_95": [
+          7843384.068907162,
+          10624211.537658626
+        ],
+        "survey_weight": "WTPH2YR",
+        "unweighted_cases": 283,
+        "unweighted_denominator": 5143,
+        "definition": "Adults aged 20+ meeting notebook-defined single-visit CKD laboratory screen and probable T2D proxy; not clinically confirmed CKD or T2D",
+        "provenance": {
+          "source": "CDC NHANES",
+          "derived_from": "V4.2 output archive",
+          "archive_sha256": "acc28d43ecc65958afea1fb17b794cae70ecbdde11070d398f350ba897250ce2",
+          "validation_report": "v4_2_validation_report.json",
+          "methodology_audit": "v4_2_cdc_methodology_audit.json"
+        },
+        "limitations": [
+          "Single-visit screening proxy; not a confirmed diagnosis",
+          "Not an eligibility or market-size estimate",
+          "Cross-cycle trends not validated",
+          "External epidemiological validation outstanding"
+        ]
+      },
+      "clinical_kg_lexical_retrieval": []
+    },
+    "response": {
+      "status": "SCREENING_ESTIMATE_WITH_CAVEATS",
+      "answer": "NHANES 2021-2023: approximately 9,233,798 U.S. adults meet a single-visit CKD laboratory-screening and probable T2D proxy (reported 95% CI 7,843,384\u201310,624,212); not confirmed diagnoses, treatment eligibility, or a validated trend.",
+      "evidence_ids": [
+        "NHANES_2021_2023_PRIMARY"
+      ],
+      "weight": null
+    },
+    "overall_status": "REVIEW_REQUIRED",
+    "evidence_policy": "REAL_ONLY_NO_SIMULATED_SCIENTIFIC_EVIDENCE"
+  },
+  {
+    "question": "How many patients are eligible for Kerendia?",
+    "timestamp_utc": "2026-10-25T10:41:16.559346+00:00",
+    "plan": [
+      "baseline_integrity",
+      "clinical_kg_lexical_retrieval"
+    ],
+    "tools": {
+      "baseline_integrity": {
+        "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+        "nodes": 293,
+        "edges": 517,
+        "observations": 4,
+        "links": 88
+      },
+      "clinical_kg_lexical_retrieval": []
+    },
+    "response": {
+      "status": "BLOCKED_ELIGIBILITY",
+      "answer": "Screening proxies do not support clinical eligibility or market sizing.",
+      "evidence_ids": []
+    },
+    "overall_status": "BLOCKED",
+    "evidence_policy": "REAL_ONLY_NO_SIMULATED_SCIENTIFIC_EVIDENCE"
+  },
+  {
+    "question": "Is CKD increasing across cycles?",
+    "timestamp_utc": "2026-10-25T10:41:16.562698+00:00",
+    "plan": [
+      "baseline_integrity",
+      "population_observation",
+      "clinical_kg_lexical_retrieval"
+    ],
+    "tools": {
+      "baseline_integrity": {
+        "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+        "nodes": 293,
+        "edges": 517,
+        "observations": 4,
+        "links": 88
+      },
+      "population_observation": {
+        "status": "REVIEW_REQUIRED",
+        "evidence_id": "NHANES_2021_2023_PRIMARY",
+        "period": "2021-2023",
+        "scenario": "primary",
+        "estimate": 9233797.803282894,
+        "ci_95": [
+          7843384.068907162,
+          10624211.537658626
+        ],
+        "survey_weight": "WTPH2YR",
+        "unweighted_cases": 283,
+        "unweighted_denominator": 5143,
+        "definition": "Adults aged 20+ meeting notebook-defined single-visit CKD laboratory screen and probable T2D proxy; not clinically confirmed CKD or T2D",
+        "provenance": {
+          "source": "CDC NHANES",
+          "derived_from": "V4.2 output archive",
+          "archive_sha256": "acc28d43ecc65958afea1fb17b794cae70ecbdde11070d398f350ba897250ce2",
+          "validation_report": "v4_2_validation_report.json",
+          "methodology_audit": "v4_2_cdc_methodology_audit.json"
+        },
+        "limitations": [
+          "Single-visit screening proxy; not a confirmed diagnosis",
+          "Not an eligibility or market-size estimate",
+          "Cross-cycle trends not validated",
+          "External epidemiological validation outstanding"
+        ]
+      },
+      "clinical_kg_lexical_retrieval": []
+    },
+    "response": {
+      "status": "BLOCKED_TREND",
+      "answer": "Cross-cycle trend inference remains blocked pending laboratory and epidemiological comparability review.",
+      "evidence_ids": []
+    },
+    "overall_status": "BLOCKED",
+    "evidence_policy": "REAL_ONLY_NO_SIMULATED_SCIENTIFIC_EVIDENCE"
+  },
+  {
+    "question": "What does the clinical knowledge graph say about chronic kidney disease?",
+    "timestamp_utc": "2026-10-25T10:41:16.566077+00:00",
+    "plan": [
+      "baseline_integrity",
+      "population_observation",
+      "clinical_kg_lexical_retrieval"
+    ],
+    "tools": {
+      "baseline_integrity": {
+        "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+        "nodes": 293,
+        "edges": 517,
+        "observations": 4,
+        "links": 88
+      },
+      "population_observation": {
+        "status": "REVIEW_REQUIRED",
+        "evidence_id": "NHANES_2021_2023_PRIMARY",
+        "period": "2021-2023",
+        "scenario": "primary",
+        "estimate": 9233797.803282894,
+        "ci_95": [
+          7843384.068907162,
+          10624211.537658626
+        ],
+        "survey_weight": "WTPH2YR",
+        "unweighted_cases": 283,
+        "unweighted_denominator": 5143,
+        "definition": "Adults aged 20+ meeting notebook-defined single-visit CKD laboratory screen and probable T2D proxy; not clinically confirmed CKD or T2D",
+        "provenance": {
+          "source": "CDC NHANES",
+          "derived_from": "V4.2 output archive",
+          "archive_sha256": "acc28d43ecc65958afea1fb17b794cae70ecbdde11070d398f350ba897250ce2",
+          "validation_report": "v4_2_validation_report.json",
+          "methodology_audit": "v4_2_cdc_methodology_audit.json"
+        },
+        "limitations": [
+          "Single-visit screening proxy; not a confirmed diagnosis",
+          "Not an eligibility or market-size estimate",
+          "Cross-cycle trends not validated",
+          "External epidemiological validation outstanding"
+        ]
+      },
+      "clinical_kg_lexical_retrieval": []
+    },
+    "response": {
+      "status": "SCREENING_ESTIMATE_WITH_CAVEATS",
+      "answer": "NHANES 2021-2023: approximately 9,233,798 U.S. adults meet a single-visit CKD laboratory-screening and probable T2D proxy (reported 95% CI 7,843,384\u201310,624,212); not confirmed diagnoses, treatment eligibility, or a validated trend.",
+      "evidence_ids": [
+        "NHANES_2021_2023_PRIMARY"
+      ],
+      "weight": null
+    },
+    "overall_status": "REVIEW_REQUIRED",
+    "evidence_policy": "REAL_ONLY_NO_SIMULATED_SCIENTIFIC_EVIDENCE"
+  },
+  {
+    "question": "Latest PubMed literature on finerenone",
+    "timestamp_utc": "2026-10-25T10:41:16.568340+00:00",
+    "plan": [
+      "baseline_integrity",
+      "clinical_kg_lexical_retrieval",
+      "external_literature_live"
+    ],
+    "tools": {
+      "baseline_integrity": {
+        "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+        "nodes": 293,
+        "edges": 517,
+        "observations": 4,
+        "links": 88
+      },
+      "clinical_kg_lexical_retrieval": [],
+      "external_literature_live": {
+        "status": "NOT_REQUESTED_FOR_EXECUTION",
+        "reason": "Enable external=True to attempt real biomedical APIs; no cached/simulated results substituted"
+      }
+    },
+    "response": {
+      "status": "BLOCKED_ELIGIBILITY",
+      "answer": "NHANES single-visit screening proxies do not establish confirmed disease, prescription eligibility, or treatment market size. Clinical validation required.",
+      "evidence_ids": []
+    },
+    "overall_status": "BLOCKED",
+    "evidence_policy": "REAL_ONLY_NO_SIMULATED_SCIENTIFIC_EVIDENCE"
+  }
+]

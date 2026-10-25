@@ -1,0 +1,40 @@
+{
+  "version": "V6",
+  "created_utc": "2026-10-25T03:36:22.302460+00:00",
+  "baseline_nodes": 293,
+  "baseline_edges": 517,
+  "baseline_sha256": "4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf",
+  "population_observations": 4,
+  "unapproved_conceptual_links": 16,
+  "automated_tests": {
+    "baseline_checksum": true,
+    "baseline_node_count": true,
+    "baseline_edge_count": true,
+    "four_population_observations": true,
+    "no_clinical_link_human_approval": true,
+    "population_has_observation_id": true,
+    "population_has_confidence_interval": true,
+    "population_reports_review_required": true,
+    "population_weight_is_explicit": true,
+    "eligibility_blocked": true,
+    "market_sizing_blocked": true,
+    "trend_blocked": true,
+    "clinical_not_misrepresented_as_validated": true,
+    "out_of_scope_guard": true,
+    "bridge_not_primary": true,
+    "no_unreviewed_concept_promotion": true,
+    "baseline_source_unmodified": true
+  },
+  "tests_passed": 17,
+  "tests_total": 17,
+  "status": "PROTOTYPE_TESTS_PASS_SCIENTIFIC_REVIEW_PENDING",
+  "remaining_blockers": [
+    "Human clinical review of candidate mappings",
+    "Independent external epidemiological validation",
+    "Serum creatinine and laboratory cross-cycle comparability",
+    "Not a prescribing or market-sizing tool"
+  ],
+  "no_github_access": true,
+  "llm_used": false,
+  "query_engine": "deterministic safety-gated evidence retrieval"
+}
