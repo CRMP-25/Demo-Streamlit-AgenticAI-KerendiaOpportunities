@@ -160,3 +160,12 @@ The aim is a reliable research partner whose outputs are independently inspectab
 **Safeguards:** Original clinical KG remains byte-identical (SHA-256 `4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf`). No fabricated publications, study outcomes, eligibility fractions, patients or market numbers. Abstract excerpts are not critical appraisal. KG relationships are original, not clinically adjudicated. NHANES is single-visit screening only. Existing source failure is explicit. No production GitHub access or modification.
 
 **Local validation:** 53/53 automated tests passed, including 6 V7.7-specific tests using isolated software fixtures; Python source compilation passed. Cloud UI and real external retrieval for V7.7 are NOT yet verified. Deployment requires a manual upload to the separate demo GitHub repository and Streamlit redeployment. This remains a controlled functional demonstration, not a validated clinical or commercial intelligence engine.
+
+
+### V7.7.1 targeted corrective release (2026-10-25)
+
+**Trigger:** V7.7 user-uploaded live Markdown report retrieved five PubMed and five ClinicalTrials.gov records but all three targeted pivotal evidence requests returned HTTP 429. Its KG traversal was functional but insufficiently relevant to finerenone.
+
+**Implementation:** Batched targeted PubMed query and summaries, bounded retry/backoff for 429/transient server failures, successful-response-only six-hour in-process cache with original timestamps, batched abstract retrieval, relevance-ranked existing KG edges. No changes to the original KG, no artificial research evidence, no HTTPS verification bypass.
+
+**Remaining gaps:** Live cloud PubMed/Streamlit acceptance pending; no guarantee of all three pivotal studies from title-based retrieval; no independent critical appraisal or clinical eligibility estimate. Existing V7.6.1 and V7.7 deployments must remain untouched pending V7.7.1 acceptance.

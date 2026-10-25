@@ -9,7 +9,7 @@ class TestV77(unittest.TestCase):
  def test_integrity(self):self.assertEqual(integrity()['baseline_sha256'],'4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf')
  def test_no_fabricated_evidence(self):
   r=build_v77(Q,fetch_live=False,external_results=EMPTY)
-  self.assertEqual(r['version'],'V7.7');self.assertFalse(r['pivotal_evidence']);self.assertEqual(r['abstract_evidence']['status'],'NOT_REQUESTED')
+  self.assertEqual(r['version'],'V7.7.1');self.assertFalse(r['pivotal_evidence']);self.assertEqual(r['abstract_evidence']['status'],'NOT_REQUESTED')
   self.assertIn('No percentage or market number inferred',to_markdown(r))
  def test_original_edges_only(self):
   r=build_v77(Q,fetch_live=False,external_results=EMPTY)
