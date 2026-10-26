@@ -41,7 +41,7 @@ class NHANESComputeTests(unittest.TestCase):
         df=self.df.copy();df.loc[0,'w']=-1
         with self.assertRaises(SurveyInputError):self.run_calc(df)
     def test_release(self):
-        self.assertEqual(APP_VERSION,'V7.7.8')
-        self.assertIn('V7_7_8',download_name('Investigation','md'))
+        self.assertEqual(APP_VERSION,'V7.7.9')
+        self.assertIn('V7_7_9',download_name('Investigation','md'))
 
 if __name__=='__main__': unittest.main()

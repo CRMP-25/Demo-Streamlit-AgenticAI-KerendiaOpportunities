@@ -1,4 +1,4 @@
-"""V7.7.5 local Streamlit demo. No repository access, no synthetic scientific evidence."""
+"""V7.7.9 local Streamlit demo. No repository access, no synthetic scientific evidence."""
 import json
 import streamlit as st
 import pandas as pd
@@ -7,6 +7,7 @@ import networkx as nx
 from src.demo import SAFE_QUESTIONS, observations, graph_neighborhood
 from src.v777 import build_v777 as build_investigation, to_markdown
 from src.nhanes_compute import compute_screening_total, SurveyInputError
+from src.nhanes_cdc import compute_official_nhanes
 from src.version import APP_VERSION, download_name
 from src.v7 import literature_refresh, population
 from src.release import report
@@ -82,8 +83,31 @@ with pop_tab:
         with st.expander('Source provenance and definition'):st.json(result)
     st.caption('Cross-cycle trend comparisons are deliberately disabled. Period selection is descriptive only.')
 with compute_tab:
-    st.subheader('V7.7.8 · Participant-level NHANES screening computation')
-    st.warning('Upload authentic, de-identified data only. This computes a user-defined screening proxy, NOT confirmed disease or treatment eligibility. No data are supplied with this release.')
+    st.subheader('V7.7.9 · CDC NHANES auto-computation')
+    st.info('No files needed from you. Retrieve five official CDC 2021–2023 SAS XPT modules, derive documented screening proxies, and calculate a survey-weighted estimate.')
+    if st.button('Retrieve CDC data and compute screening estimate', type='primary', key='nhanes_cdc_compute'):
+        with st.spinner('Downloading official CDC files, joining participant records and calculating survey-weighted estimate...'):
+            try:
+                st.session_state['v779_cdc_result'] = compute_official_nhanes()
+            except Exception as exc:
+                st.error('CDC computation unavailable; no estimate generated: '+str(exc))
+    if 'v779_cdc_result' in st.session_state:
+        cdc = st.session_state['v779_cdc_result']
+        st.metric('Computed adult screening proxy (NOT diagnosed or eligible)', f"{cdc['estimate']:,.0f}")
+        st.write('Unweighted positive / known:', cdc['unweighted_positive'], '/', cdc['unweighted_known'])
+        if cdc['ci95_normal_approx']:
+            st.write('Approximate 95% CI:', f"{cdc['ci95_normal_approx'][0]:,.0f} – {cdc['ci95_normal_approx'][1]:,.0f}")
+        else:
+            st.warning('Confidence interval unavailable under current PSU design checks.')
+        st.write('Difference from historical 9,233,798 estimate:', f"{cdc['difference_from_historical']:,.0f}")
+        st.warning(cdc['historical_comparability'] + ' ' + cdc['cautions'])
+        with st.expander('Definitions, source URLs, file SHA-256 checksums and methods'):
+            st.json(cdc)
+        st.download_button('Download CDC computation audit (JSON)', json.dumps(cdc,indent=2),
+                           file_name='Healthcare_Intelligence_CDC_NHANES_V7_7_9.json',mime='application/json')
+    st.divider()
+    st.subheader('Advanced: analyze your own prepared participant-level CSV')
+    st.warning('Optional advanced workflow. Only upload authentic, de-identified data. This is a screening proxy, NOT confirmed disease or treatment eligibility.')
     st.caption('CSV must include a 0/1 screening flag derived by your documented rules, an appropriate survey weight, survey stratum and PSU. Optional 0/1 universe flag. Uploaded data are processed in this session; do not upload identifying information.')
     upload = st.file_uploader('Upload de-identified participant-level CSV', type=['csv'], key='nhanes_v778_upload')
     if upload is not None:
