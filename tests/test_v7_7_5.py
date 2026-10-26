@@ -5,8 +5,8 @@ from src.version import APP_VERSION, download_name
 
 class TestV775(unittest.TestCase):
     def test_version(self):
-        self.assertEqual(APP_VERSION, 'V7.7.5')
-        self.assertEqual(download_name('Investigation','md'),'Healthcare_Intelligence_Investigation_V7_7_5.md')
+        self.assertEqual(APP_VERSION, 'V7.7.6')
+        self.assertEqual(download_name('Investigation','md'),'Healthcare_Intelligence_Investigation_V7_7_6.md')
     def test_figaro_correct_title(self):
         self.assertEqual(PRIMARY_CANDIDATES['FIGARO-DKD'],
             ('34449181','Cardiovascular Events with Finerenone in Kidney Disease and Type 2 Diabetes'))
@@ -33,7 +33,7 @@ class TestV775(unittest.TestCase):
     def test_population_no_network(self):
         b=build_v775('How many US adults meet the CKD screening and probable T2D proxy in NHANES 2021-2023?',fetch_live=False)
         self.assertEqual(b['intent'],'POPULATION_ONLY')
-        self.assertEqual(b['version'],'V7.7.5')
+        self.assertEqual(b['version'],'V7.7.6')
     def test_integrated_offline(self):
         q='Investigate finerenone CKD T2D treatment opportunity and NHANES population'
         b=build_v775(q,fetch_live=False,external_results={'pubmed':{'status':'UNAVAILABLE','records':[]},'trials':{'status':'UNAVAILABLE','records':[]}},pivotal_results={},abstract_results={'status':'NOT_REQUESTED','records':{}},primary_results={'status':'UNAVAILABLE','records':[],'warnings':['offline']})
