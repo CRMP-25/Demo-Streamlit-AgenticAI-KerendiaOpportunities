@@ -149,3 +149,23 @@ The aim is a reliable research partner whose outputs are independently inspectab
 **Remaining demo-only acceptance:** On the user's Mac, run `python3 -m streamlit run app.py --server.port 8502` from the extracted V7.6.1 folder in the activated environment, preserving the verified SSL_CERT_FILE setting. Confirm Ask the Agent shows integrated literature and population/KG findings, confirm the KG plot labels are readable, and confirm the Intelligence Report is coherent. This is a functional demo acceptance check, not a requirement for clinical adjudication or raw NHANES reanalysis.
 
 **Safeguards remain mandatory:** No fabricated evidence; no disabled SSL verification; no clinical eligibility or market-size claims based on screening proxies; no cross-cycle trend claims; no production GitHub operations; original KG unchanged. Evidence-source retrieval success is not the same as critical appraisal or clinical approval.
+
+
+## 13. V7.7 — evidence-grounded reasoning and opportunity funnel (2026-10-25)
+
+**Authorization:** User approved the V7.7 development milestone after reviewing the complete V7.6.1 Markdown investigation. Scope: improve evidence reasoning, KG relationship traversal, population segmentation logic, and integrated synthesis.
+
+**Implemented:** New `src/v77.py` introduces read-only traversal of original KG edges, targeted live PubMed searches for FIDELIO-DKD, FIGARO-DKD and FIDELITY, HTTPS retrieval of actual PubMed XML abstracts with attributed results/conclusion excerpts when available, and a five-stage evidence-requirements funnel. Streamlit now calls V7.7 and offers V7.7 Markdown exports. `requirements.txt` consolidated.
+
+**Safeguards:** Original clinical KG remains byte-identical (SHA-256 `4b43634ec370b1a7b1dfc28e6fbb9458172ba8234959d6c5f5713ad05d6212bf`). No fabricated publications, study outcomes, eligibility fractions, patients or market numbers. Abstract excerpts are not critical appraisal. KG relationships are original, not clinically adjudicated. NHANES is single-visit screening only. Existing source failure is explicit. No production GitHub access or modification.
+
+**Local validation:** 53/53 automated tests passed, including 6 V7.7-specific tests using isolated software fixtures; Python source compilation passed. Cloud UI and real external retrieval for V7.7 are NOT yet verified. Deployment requires a manual upload to the separate demo GitHub repository and Streamlit redeployment. This remains a controlled functional demonstration, not a validated clinical or commercial intelligence engine.
+
+
+### V7.7.1 targeted corrective release (2026-10-25)
+
+**Trigger:** V7.7 user-uploaded live Markdown report retrieved five PubMed and five ClinicalTrials.gov records but all three targeted pivotal evidence requests returned HTTP 429. Its KG traversal was functional but insufficiently relevant to finerenone.
+
+**Implementation:** Batched targeted PubMed query and summaries, bounded retry/backoff for 429/transient server failures, successful-response-only six-hour in-process cache with original timestamps, batched abstract retrieval, relevance-ranked existing KG edges. No changes to the original KG, no artificial research evidence, no HTTPS verification bypass.
+
+**Remaining gaps:** Live cloud PubMed/Streamlit acceptance pending; no guarantee of all three pivotal studies from title-based retrieval; no independent critical appraisal or clinical eligibility estimate. Existing V7.6.1 and V7.7 deployments must remain untouched pending V7.7.1 acceptance.
