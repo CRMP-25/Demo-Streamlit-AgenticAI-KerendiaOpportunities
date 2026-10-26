@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import networkx as nx
 from src.demo import SAFE_QUESTIONS, observations, graph_neighborhood
-from src.v776 import build_v776 as build_investigation, to_markdown
+from src.v777 import build_v777 as build_investigation, to_markdown
 from src.version import APP_VERSION, download_name
 from src.v7 import literature_refresh, population
 from src.release import report
