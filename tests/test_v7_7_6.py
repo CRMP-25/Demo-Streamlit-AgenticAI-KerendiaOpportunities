@@ -4,8 +4,8 @@ from src.version import APP_VERSION, download_name
 
 class TestV776(unittest.TestCase):
     def test_version(self):
-        self.assertEqual(APP_VERSION,'V7.7.7')
-        self.assertIn('V7_7_7',download_name('Investigation','md'))
+        self.assertEqual(APP_VERSION,'V7.7.8')
+        self.assertIn('V7_7_8',download_name('Investigation','md'))
     def test_no_unsourced_primary_numbers(self):
         s,_=integrated_synthesis({'primary_trial_evidence':{'records':[]}})
         self.assertNotIn('17.8%',s)
@@ -22,9 +22,9 @@ class TestV776(unittest.TestCase):
         self.assertLess(s.index('34449181'),s.index('35023547'))
     def test_integrated_offline(self):
         b=build_v776('Investigate finerenone CKD T2D treatment opportunity and NHANES population',fetch_live=False)
-        self.assertEqual(b['version'],'V7.7.7')
+        self.assertEqual(b['version'],'V7.7.8')
         self.assertTrue(any(s['title'].startswith('Integrated clinical intelligence synthesis') for s in b['sections']))
-        self.assertIn('V7.7.7',to_markdown(b).splitlines()[0])
+        self.assertIn('V7.7.8',to_markdown(b).splitlines()[0])
     def test_population_fast_path(self):
         b=build_v776('How many US adults meet the CKD screening and probable T2D proxy in NHANES 2021-2023?',fetch_live=False)
         self.assertEqual(b['intent'],'POPULATION_ONLY')

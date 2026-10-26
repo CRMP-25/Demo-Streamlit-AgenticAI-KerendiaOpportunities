@@ -4,7 +4,7 @@ from src.version import APP_VERSION
 
 class TestV777(unittest.TestCase):
     def test_release(self):
-        self.assertEqual(APP_VERSION,'V7.7.7')
+        self.assertEqual(APP_VERSION,'V7.7.8')
     def test_no_fake_efficacy(self):
         a=evidence_gap_analysis({'primary_trial_evidence':{'records':[]},'sections':[]})
         self.assertFalse(any(a['verified_primary'].values()))
@@ -19,10 +19,10 @@ class TestV777(unittest.TestCase):
         self.assertFalse(evidence_gap_analysis({'primary_trial_evidence':{'records':[r]},'sections':[]})['verified_primary']['FIDELIO-DKD'])
     def test_offline_integration(self):
         b=build_v777('Investigate finerenone CKD T2D treatment opportunity and NHANES population',fetch_live=False)
-        self.assertEqual(b['version'],'V7.7.7')
+        self.assertEqual(b['version'],'V7.7.8')
         self.assertIn('evidence_gap_analysis',b)
         self.assertIn('not estimable',b['sections'][0]['text'].lower())
-        self.assertIn('V7.7.7',to_markdown(b).splitlines()[0])
+        self.assertIn('V7.7.8',to_markdown(b).splitlines()[0])
     def test_population_fast_path(self):
         b=build_v777('How many US adults meet the CKD screening and probable T2D proxy in NHANES 2021-2023?',fetch_live=False)
         self.assertEqual(b['intent'],'POPULATION_ONLY')

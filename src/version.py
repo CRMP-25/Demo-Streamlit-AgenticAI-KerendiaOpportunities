@@ -1,5 +1,5 @@
 """Single source of truth for displayed release and downloaded file names."""
-APP_VERSION = 'V7.7.7'
+APP_VERSION = 'V7.7.8'
 FILE_VERSION = APP_VERSION.replace('.', '_')
 
 def download_name(kind, extension):

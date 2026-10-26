@@ -6,6 +6,7 @@ import plotly.graph_objects as go
 import networkx as nx
 from src.demo import SAFE_QUESTIONS, observations, graph_neighborhood
 from src.v777 import build_v777 as build_investigation, to_markdown
+from src.nhanes_compute import compute_screening_total, SurveyInputError
 from src.version import APP_VERSION, download_name
 from src.v7 import literature_refresh, population
 from src.release import report
@@ -21,7 +22,7 @@ except Exception as exc:
     st.error('Baseline integrity failed. Application halted: '+str(exc));st.stop()
 c1,c2,c3,c4=st.columns(4)
 c1.metric('Clinical concepts',stats['nodes']);c2.metric('KG relationships',stats['edges']);c3.metric('Population observations',stats['observations']);c4.metric('Candidate links',stats['links'])
-ask_tab,graph_tab,pop_tab,lit_tab,report_tab,gate_tab=st.tabs(['Ask the Agent','KG Explorer','Population Intelligence','Evidence Explorer','Intelligence Report','Validation'])
+ask_tab,graph_tab,pop_tab,compute_tab,lit_tab,report_tab,gate_tab=st.tabs(['Ask the Agent','KG Explorer','Population Intelligence','NHANES Compute','Evidence Explorer','Intelligence Report','Validation'])
 with ask_tab:
     st.subheader('Question-directed evidence-grounded investigation')
     sample=st.selectbox('Example investigations',SAFE_QUESTIONS + [
@@ -80,6 +81,51 @@ with pop_tab:
         st.info('Preliminary single-visit CKD laboratory screening + probable T2D proxy; NOT confirmed CKD, clinical eligibility, or addressable market.')
         with st.expander('Source provenance and definition'):st.json(result)
     st.caption('Cross-cycle trend comparisons are deliberately disabled. Period selection is descriptive only.')
+with compute_tab:
+    st.subheader('V7.7.8 · Participant-level NHANES screening computation')
+    st.warning('Upload authentic, de-identified data only. This computes a user-defined screening proxy, NOT confirmed disease or treatment eligibility. No data are supplied with this release.')
+    st.caption('CSV must include a 0/1 screening flag derived by your documented rules, an appropriate survey weight, survey stratum and PSU. Optional 0/1 universe flag. Uploaded data are processed in this session; do not upload identifying information.')
+    upload = st.file_uploader('Upload de-identified participant-level CSV', type=['csv'], key='nhanes_v778_upload')
+    if upload is not None:
+        try:
+            df = pd.read_csv(upload)
+            st.caption(f'{len(df):,} rows; {len(df.columns)} columns. Preview suppressed to reduce inadvertent disclosure.')
+            cols = list(df.columns)
+            if len(cols) < 4:
+                st.error('At least four mapped columns are required.')
+            else:
+                flag = st.selectbox('Binary CKD/T2D screening-proxy flag (0/1)', cols, key='nhanes_flag')
+                weight = st.selectbox('Correct NHANES survey weight', cols, index=min(1,len(cols)-1), key='nhanes_weight')
+                strata = st.selectbox('Survey stratum (e.g. SDMVSTRA)', cols, index=min(2,len(cols)-1), key='nhanes_strata')
+                psu = st.selectbox('Survey PSU (e.g. SDMVPSU)', cols, index=min(3,len(cols)-1), key='nhanes_psu')
+                universe = st.selectbox('Universe restriction flag (optional)', ['None']+cols, key='nhanes_universe')
+                cycle = st.text_input('NHANES cycle and weight derivation (required for audit)', placeholder='e.g. 2021–2023, WTPH2YR; cite source and exclusions', key='nhanes_cycle')
+                definition = st.text_area('Screening flag definition and missingness rules (required for audit)', key='nhanes_definition')
+                if st.button('Compute survey-weighted screening estimate', key='nhanes_compute_button'):
+                    if not cycle.strip() or not definition.strip():
+                        st.error('Document the survey cycle/weight derivation and screening definition first.')
+                    else:
+                        try:
+                            result = compute_screening_total(df,flag=flag,weight=weight,strata=strata,psu=psu,universe=None if universe=='None' else universe)
+                            result['user_cycle_and_weight_notes'] = cycle
+                            result['user_screening_definition'] = definition
+                            st.session_state['v778_computation'] = result
+                        except SurveyInputError as exc:
+                            st.error(str(exc))
+        except Exception as exc:
+            st.error('Could not parse CSV: '+str(exc))
+    if 'v778_computation' in st.session_state:
+        r=st.session_state['v778_computation']
+        st.metric('Survey-weighted screening proxy total', f"{r['estimate']:,.0f}")
+        st.write('Unweighted positive / known:', r['unweighted_positive'], '/', r['unweighted_known'])
+        st.write('Missing screening values:', r['missing_screening_rows'])
+        if r['ci95_normal_approx']:
+            st.write('Approximate 95% CI:', f"{r['ci95_normal_approx'][0]:,.0f} – {r['ci95_normal_approx'][1]:,.0f}")
+        else:
+            st.warning('CI unavailable: singleton strata or insufficient PSU degrees of freedom.')
+        st.caption(r['limitations'])
+        st.download_button('Download computation audit (JSON)',json.dumps(r,indent=2),file_name='Healthcare_Intelligence_NHANES_Computation_V7_7_8.json',mime='application/json')
+
 with lit_tab:
     st.subheader('Authentic biomedical source retrieval')
     term=st.text_input('PubMed / ClinicalTrials.gov search',value='finerenone chronic kidney disease')
