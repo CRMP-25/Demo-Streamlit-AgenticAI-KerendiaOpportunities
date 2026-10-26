@@ -6,10 +6,10 @@ from src.v773 import build_v773, to_markdown, classify_study, complete_source_se
 
 class TestV773(unittest.TestCase):
     def test_filename_version(self):
-        self.assertEqual(download_name('Investigation','md'),'Healthcare_Intelligence_Investigation_V7_7_4.md')
-        self.assertEqual(download_name('Report','md'),'Healthcare_Intelligence_Report_V7_7_4.md')
-        self.assertEqual(download_name('Evidence','json'),'Healthcare_Intelligence_Evidence_V7_7_4.json')
-        self.assertEqual('V7_7_4',FILE_VERSION)
+        self.assertEqual(download_name('Investigation','md'),'Healthcare_Intelligence_Investigation_V7_7_5.md')
+        self.assertEqual(download_name('Report','md'),'Healthcare_Intelligence_Report_V7_7_5.md')
+        self.assertEqual(download_name('Evidence','json'),'Healthcare_Intelligence_Evidence_V7_7_5.json')
+        self.assertEqual('V7_7_5',FILE_VERSION)
     def test_app_downloads_not_hardcoded(self):
         app=(Path(__file__).parents[1]/'app.py').read_text()
         self.assertIn("download_name('Investigation','md')",app)

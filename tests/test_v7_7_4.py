@@ -4,8 +4,8 @@ from src.version import APP_VERSION, download_name
 
 class TestV774(unittest.TestCase):
  def test_version(self):
-  self.assertEqual(APP_VERSION,'V7.7.4')
-  self.assertEqual(download_name('Investigation','md'),'Healthcare_Intelligence_Investigation_V7_7_4.md')
+  self.assertEqual(APP_VERSION,'V7.7.5')
+  self.assertEqual(download_name('Investigation','md'),'Healthcare_Intelligence_Investigation_V7_7_5.md')
  def test_title_verification_fail_closed(self):
   self.assertIsNone(verify_primary_candidate('FIDELIO-DKD','33264825','Effect of Finerenone on Chronic Kidney Disease Outcomes in Type 2 Diabetes',{'title':'Unrelated publication'}))
   self.assertIsNotNone(verify_primary_candidate('FIDELIO-DKD','33264825','Effect of Finerenone on Chronic Kidney Disease Outcomes in Type 2 Diabetes',{'title':'Effect of Finerenone on Chronic Kidney Disease Outcomes in Type 2 Diabetes.'}))
@@ -20,7 +20,7 @@ class TestV774(unittest.TestCase):
   self.assertEqual(quantitative_source_findings({'abstract_sections':[{'label':'Results','text':'No effect measures reported.'}]}),[])
  def test_population_preserved(self):
   b=build_v774('How many US adults meet the CKD screening and probable T2D proxy in NHANES 2021-2023?',fetch_live=False)
-  self.assertEqual(b['version'],'V7.7.4')
+  self.assertEqual(b['version'],'V7.7.5')
   self.assertEqual(b['intent'],'POPULATION_ONLY')
  def test_offline_integrated(self):
   q='Investigate finerenone CKD T2D treatment opportunity and NHANES population'

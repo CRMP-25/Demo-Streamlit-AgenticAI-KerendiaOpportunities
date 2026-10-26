@@ -1,11 +1,11 @@
-"""V7.7.4 local Streamlit demo. No repository access, no synthetic scientific evidence."""
+"""V7.7.5 local Streamlit demo. No repository access, no synthetic scientific evidence."""
 import json
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 import networkx as nx
 from src.demo import SAFE_QUESTIONS, observations, graph_neighborhood
-from src.v774 import build_v774 as build_investigation, to_markdown
+from src.v775 import build_v775 as build_investigation, to_markdown
 from src.version import APP_VERSION, download_name
 from src.v7 import literature_refresh, population
 from src.release import report
