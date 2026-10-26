@@ -7,6 +7,7 @@ Taylor linearization assumes independent with-replacement PSUs within strata.
 from __future__ import annotations
 import math
 import pandas as pd
+from scipy.stats import t as student_t
 
 
 class SurveyInputError(ValueError):
@@ -45,6 +46,8 @@ def compute_screening_total(frame: pd.DataFrame, *, flag: str, weight: str,
     # the missing-weight fraction is reported, not silently treated as negative.
     data['_y'] = w * f.fillna(0) * data['_in_universe'].astype(float)
     data['_denom'] = w * valid.astype(float)
+    data['_missing_weight'] = w * (data['_in_universe'] & f.isna()).astype(float)
+    data['_universe_weight'] = w * data['_in_universe'].astype(float)
     total = float(data['_y'].sum())
     denom = float(data['_denom'].sum())
     if denom <= 0:
@@ -67,21 +70,36 @@ def compute_screening_total(frame: pd.DataFrame, *, flag: str, weight: str,
         variance += float(m / (m - 1) * ((arr - arr.mean()) ** 2).sum())
         df += m - 1
     se = math.sqrt(max(variance, 0.0)) if not singleton and df > 0 else None
-    # Normal 1.96 approximation disclosed; no unwarranted t-based CI.
-    ci = [max(0.0, total - 1.96 * se), total + 1.96 * se] if se is not None else None
+    # Student-t reference quantile uses estimated design degrees of freedom.
+    # This is still an approximate PSU Taylor interval, not a CDC-certified result.
+    critical = float(student_t.ppf(0.975, df)) if se is not None else None
+    ci_t = [max(0.0, total - critical * se), total + critical * se] if se is not None else None
+    ci_normal = [max(0.0, total - 1.96 * se), total + 1.96 * se] if se is not None else None
+    missing_weight = float(data['_missing_weight'].sum())
+    universe_weight = float(data['_universe_weight'].sum())
     return {
         'status': 'COMPUTED_FROM_UPLOADED_ROWS', 'estimate': total,
         'unweighted_positive': count, 'unweighted_known': known,
         'missing_screening_rows': missing_count,
         'weighted_complete_case_denominator': denom,
         'screening_fraction_among_known': total / denom,
-        'standard_error': se, 'ci95_normal_approx': ci,
+        'standard_error': se, 'ci95_normal_approx': ci_normal,
+        'ci95_t_approx': ci_t, 'ci95_t_critical': critical,
+        'missing_screening_weight': missing_weight,
+        'weighted_universe_total': universe_weight,
+        'missing_weight_fraction_in_universe': missing_weight / universe_weight if universe_weight else None,
+        'missing_status_sensitivity': {
+            'all_missing_negative': total,
+            'all_missing_positive': total + missing_weight,
+            'interpretation': 'Extreme-case classification bounds holding observed survey weights fixed; not a confidence interval, not a missingness adjustment, and not evidence of clinical eligibility.'
+        },
         'design_degrees_freedom': df, 'singleton_strata': singleton,
         'rows_supplied': len(data), 'rows_in_universe': int(data['_in_universe'].sum()),
-        'design_method': 'Stratified PSU Taylor variance for weighted total; with-replacement approximation; normal 1.96 CI',
+        'design_method': 'Stratified PSU Taylor variance for weighted total; with-replacement approximation; Student-t CI using PSU design degrees of freedom (normal interval retained for comparison)',
         'limitations': ('Requires verified NHANES cycle weights, appropriate population universe, '
                         'screening flag derivation, missing-data rules, and design variables. '
                         'Not a CKD diagnosis, T2D diagnosis, or finerenone-eligible population. '
+                        'Extreme-case missingness bounds are not probability intervals. '
                         'No finite population correction; no multi-cycle weight derivation. '
                         'Singleton strata suppress standard error and CI.'),
     }

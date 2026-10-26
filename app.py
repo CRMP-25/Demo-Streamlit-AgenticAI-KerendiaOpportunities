@@ -1,4 +1,4 @@
-"""V7.7.9 local Streamlit demo. No repository access, no synthetic scientific evidence."""
+"""V7.7.10 local Streamlit demo. No repository access, no synthetic scientific evidence."""
 import json
 import streamlit as st
 import pandas as pd
@@ -83,7 +83,7 @@ with pop_tab:
         with st.expander('Source provenance and definition'):st.json(result)
     st.caption('Cross-cycle trend comparisons are deliberately disabled. Period selection is descriptive only.')
 with compute_tab:
-    st.subheader('V7.7.9 · CDC NHANES auto-computation')
+    st.subheader('V7.7.10 · CDC NHANES auto-computation')
     st.info('No files needed from you. Retrieve five official CDC 2021–2023 SAS XPT modules, derive documented screening proxies, and calculate a survey-weighted estimate.')
     if st.button('Retrieve CDC data and compute screening estimate', type='primary', key='nhanes_cdc_compute'):
         with st.spinner('Downloading official CDC files, joining participant records and calculating survey-weighted estimate...'):
@@ -95,16 +95,22 @@ with compute_tab:
         cdc = st.session_state['v779_cdc_result']
         st.metric('Computed adult screening proxy (NOT diagnosed or eligible)', f"{cdc['estimate']:,.0f}")
         st.write('Unweighted positive / known:', cdc['unweighted_positive'], '/', cdc['unweighted_known'])
-        if cdc['ci95_normal_approx']:
-            st.write('Approximate 95% CI:', f"{cdc['ci95_normal_approx'][0]:,.0f} – {cdc['ci95_normal_approx'][1]:,.0f}")
+        if cdc.get('ci95_t_approx'):
+            st.write('Approximate 95% Student-t CI:', f"{cdc['ci95_t_approx'][0]:,.0f} – {cdc['ci95_t_approx'][1]:,.0f}")
+            st.caption(f"PSU Taylor SE: {cdc['standard_error']:,.0f}; design df: {cdc['design_degrees_freedom']}; t critical: {cdc['ci95_t_critical']:.3f}. Not independently CDC-certified.")
         else:
             st.warning('Confidence interval unavailable under current PSU design checks.')
+        sensitivity = cdc.get('missing_status_sensitivity')
+        if sensitivity:
+            st.write('Missing-screening classification sensitivity (not a confidence interval):',
+                     f"{sensitivity['all_missing_negative']:,.0f} – {sensitivity['all_missing_positive']:,.0f}")
+            st.caption(f"Missing screening records: {cdc['missing_screening_rows']:,}; survey weight represented by these records: {cdc['missing_screening_weight']:,.0f}. These extreme cases do not correct selection bias.")
         st.write('Difference from historical 9,233,798 estimate:', f"{cdc['difference_from_historical']:,.0f}")
         st.warning(cdc['historical_comparability'] + ' ' + cdc['cautions'])
         with st.expander('Definitions, source URLs, file SHA-256 checksums and methods'):
             st.json(cdc)
         st.download_button('Download CDC computation audit (JSON)', json.dumps(cdc,indent=2),
-                           file_name='Healthcare_Intelligence_CDC_NHANES_V7_7_9.json',mime='application/json')
+                           file_name='Healthcare_Intelligence_CDC_NHANES_V7_7_10.json',mime='application/json')
     st.divider()
     st.subheader('Advanced: analyze your own prepared participant-level CSV')
     st.warning('Optional advanced workflow. Only upload authentic, de-identified data. This is a screening proxy, NOT confirmed disease or treatment eligibility.')
@@ -143,12 +149,14 @@ with compute_tab:
         st.metric('Survey-weighted screening proxy total', f"{r['estimate']:,.0f}")
         st.write('Unweighted positive / known:', r['unweighted_positive'], '/', r['unweighted_known'])
         st.write('Missing screening values:', r['missing_screening_rows'])
-        if r['ci95_normal_approx']:
-            st.write('Approximate 95% CI:', f"{r['ci95_normal_approx'][0]:,.0f} – {r['ci95_normal_approx'][1]:,.0f}")
+        if r.get('ci95_t_approx'):
+            st.write('Approximate 95% Student-t CI:', f"{r['ci95_t_approx'][0]:,.0f} – {r['ci95_t_approx'][1]:,.0f}")
+        if r.get('missing_status_sensitivity'):
+            st.write('Missing-status extreme-case sensitivity (not CI):', r['missing_status_sensitivity'])
         else:
             st.warning('CI unavailable: singleton strata or insufficient PSU degrees of freedom.')
         st.caption(r['limitations'])
-        st.download_button('Download computation audit (JSON)',json.dumps(r,indent=2),file_name='Healthcare_Intelligence_NHANES_Computation_V7_7_8.json',mime='application/json')
+        st.download_button('Download computation audit (JSON)',json.dumps(r,indent=2),file_name='Healthcare_Intelligence_NHANES_Computation_V7_7_10.json',mime='application/json')
 
 with lit_tab:
     st.subheader('Authentic biomedical source retrieval')

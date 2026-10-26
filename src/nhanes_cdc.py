@@ -32,7 +32,7 @@ def load_official_files(fetch=None):
     """
     if fetch is None:
         def fetch(url):
-            req = Request(url, headers={'User-Agent':'HealthcareIntelligence/7.7.9 (public NHANES research)'})
+            req = Request(url, headers={'User-Agent':'HealthcareIntelligence/7.7.10 (public NHANES research)'})
             with urlopen(req, timeout=35) as response:
                 blob = response.read(MAX_BYTES + 1)
             return blob
@@ -137,6 +137,6 @@ def compute_official_nhanes(fetch=None):
             'original exact screening and complete-case definitions have not been recovered.'),
         'cautions':('Single-visit CKD screen is not persistent CKD; DIQ010 or HbA1c does not '
             'establish T2D subtype. Laboratory nonresponse and WTPH2YR suitability need '
-            'formal review; CI uses approximate PSU Taylor normal method, not CDC-certified.'),
+            'formal review; CI uses approximate PSU Taylor Student-t method, not CDC-certified; missing-status bounds are extreme-case scenarios.'),
     })
     return result
